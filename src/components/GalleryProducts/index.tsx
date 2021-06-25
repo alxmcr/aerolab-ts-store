@@ -1,5 +1,6 @@
 import { Product } from "components/Product";
 import { useProducts } from "hooks/useProducts";
+import "./GalleryProducts.css";
 
 export const GalleryProducts = () => {
     const { products, loading, error } = useProducts();
