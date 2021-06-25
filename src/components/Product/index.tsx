@@ -1,4 +1,5 @@
 import { ProductProps } from "componentsTypes";
+import './Product.css';
 
 export const Product = ({ product }: ProductProps) => {
     const { _id, name, category, cost, img } = product;
@@ -8,7 +9,7 @@ export const Product = ({ product }: ProductProps) => {
     return (
         <div className="product" id={_id}>
             <div className="product__header">
-                <img src={img.url} alt={`Product: ${name}`} />
+                <img src={img.url} alt={`Product: ${name}`} className="product__img" />
                 <button
                     className="product__btn product__btn--cart"
                     onClick={handlerAddCart}
