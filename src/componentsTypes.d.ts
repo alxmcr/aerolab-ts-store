@@ -1,5 +1,9 @@
 import { ProductAPI } from "types";
 
-interface ProductProps {
+export interface ProductProps {
     product: ProductAPI
+}
+
+export interface GalleryProductsProps {
+    products: ProductAPI[]
 }
