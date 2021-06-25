@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { getMe } from "services/UserService";
+import { UserAPI } from "types";
 
 export const useMe = () => {
-    const [me, setMe] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [me, setMe] = useState<UserAPI | null>(null);
+    const [loading, setLoading] = useState<boolean>(false);
+    const [error, setError] = useState<Error | null>(null);
 
     useEffect(() => {
         setLoading(true);
@@ -19,5 +20,5 @@ export const useMe = () => {
             })
     }, [])
 
-    return [me, loading, error]
+    return { me, loading, error }
 }

@@ -1,10 +1,10 @@
-type Category = "Indumentaria" | "Accesorios"
+export type Category = "Indumentaria" | "Accesorios"
 
-interface RedeemAPI {
+export interface RedeemAPI {
     productId: string
 }
 
-interface UserAPI {
+export interface UserAPI {
     id: string
     name: string
     points: number
@@ -12,12 +12,12 @@ interface UserAPI {
     createDate: date
 }
 
-interface ImageAPI {
+export interface ImageAPI {
     url: string
     hdUrl: string
 }
 
-interface ProductAPI {
+export interface ProductAPI {
     _id: string
     name: string
     cost: number
@@ -25,7 +25,7 @@ interface ProductAPI {
     img: ImageAPI
 }
 
-interface History {
+export interface History {
     productId: string
     name: string
     cost: number

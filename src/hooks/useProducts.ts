@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "services/ProductService";
+import { ProductAPI } from "types";
 
 export const useProducts = () => {
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [products, setProducts] = useState<ProductAPI[]>([]);
+    const [loading, setLoading] = useState<boolean>(false);
+    const [error, setError] = useState<Error | null>(null);
 
     useEffect(() => {
         setLoading(true);
         getProducts()
             .then(response => response.json())
-            .then(data => setProducts(data))
+            .then((data: ProductAPI[]) => setProducts(data))
             .catch(error => setError(error))
             .finally(() => {
                 setLoading(false);
@@ -18,5 +19,5 @@ export const useProducts = () => {
             })
     }, [])
 
-    return [products, loading, error]
+    return { products, loading, error }
 }
