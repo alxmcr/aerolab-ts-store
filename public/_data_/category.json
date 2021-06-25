@@ -1,0 +1,26 @@
+[
+    {
+        "id": "8ui312ii0dd12031ood231",
+        "name": "Indumentaria",
+        "img": {
+            "url": "https://coding-challenge-api.aerolab.co/images/Alienware13-x2.png",
+            "hdUrl": "https://coding-challenge-api.aerolab.co/images/Alienware13-x2.png"
+        }
+    },
+    {
+        "id": "8943829482123123123123",
+        "name": "Accesorios",
+        "img": {
+            "url": "https://coding-challenge-api.aerolab.co/images/Alienware13-x2.png",
+            "hdUrl": "https://coding-challenge-api.aerolab.co/images/Alienware13-x2.png"
+        }
+    },
+    {
+        "id": "i432483298103291329833",
+        "name": "Electronics",
+        "img": {
+            "url": "https://coding-challenge-api.aerolab.co/images/Alienware13-x2.png",
+            "hdUrl": "https://coding-challenge-api.aerolab.co/images/Alienware13-x2.png"
+        }
+    }
+]
