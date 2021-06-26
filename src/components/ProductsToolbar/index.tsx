@@ -13,10 +13,18 @@ export const ProductsToolbar = () => {
             <p className="toolbar__status">16 of 32 products</p>
             <div className="toolbar__arrows">
                 <button className="toolbar__button" onClick={handleNextPage}>
-                    <img src={arrowLeft} alt="Previous page" className="toolbar__icon" />
+                    <img
+                        src={arrowLeft}
+                        alt="Previous page"
+                        className="toolbar__icon"
+                    />
                 </button>
                 <button className="toolbar__button" onClick={handlePreviousPage}>
-                    <img src={arrowRight} alt="Next page" className="toolbar__icon" />
+                    <img
+                        src={arrowRight}
+                        alt="Next page"
+                        className="toolbar__icon"
+                    />
                 </button>
             </div>
             <div className="toolbar__sort">
