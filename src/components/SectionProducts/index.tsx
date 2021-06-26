@@ -1,5 +1,5 @@
-import { FilterToolbar } from "components/FilterToolbar"
 import { GalleryProducts } from "components/GalleryProducts"
+import { ProductsToolbar } from "components/ProductsToolbar"
 
 export const SectionProducts = () => {
     return (
@@ -7,7 +7,7 @@ export const SectionProducts = () => {
             <div className="products__banner">
                 <img src="" alt="" />
             </div>
-            <FilterToolbar />
+            <ProductsToolbar />
             <GalleryProducts />
         </section>
     )
