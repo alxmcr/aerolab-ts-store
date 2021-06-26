@@ -1,6 +1,7 @@
 .product {
   --height-product: 13rem;
   background-color: #fff;
+  box-shadow: 2px 2px #d8d8d8;
   height: var(--height-product);
   margin: 0 auto;
   padding: 0.5rem 1rem;
