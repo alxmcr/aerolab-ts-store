@@ -1,17 +1,26 @@
 .toolbar {
+  --color-border: #e2e0e0;
+  border-bottom: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
-  padding: 1rem 0;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.toolbar__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .toolbar__arrows {
-  align-items: center;
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
   justify-content: center;
+  gap: 0.5rem;
+  order: 1;
 }
 
 .toolbar__button {
@@ -42,8 +51,6 @@
 }
 
 .toolbar__description {
-  color: #9c9c9c;
-  font-size: 1.1rem;
   margin: 0;
 }
 
@@ -59,8 +66,9 @@
   color: #fff;
 }
 
-.toolbar__status {
+.toolbar__quantity {
   font-size: 1.1rem;
+  font-weight: 600;
   margin: 0;
   text-align: center;
 }
@@ -68,8 +76,9 @@
 .toolbar__sort {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  order: 2;
 }
 
 @media screen and (min-width: 600px) {
@@ -77,11 +86,49 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: flex-start;
     gap: 0.5rem;
   }
 }
 
+@media screen and (min-width: 768px) {
+  .toolbar__actions {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .toolbar__arrows {
+    order: 2;
+  }
+
+  .toolbar__sort {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    order: 1;
+  }
+}
+
 @media screen and (min-width: 1024px) {
+  .toolbar {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .toolbar__actions {
+    width: 80%;
+  }
+
+  .toolbar__status {
+    border-right: 1px solid var(--color-border);
+    padding-right: 1rem;
+  }
 }

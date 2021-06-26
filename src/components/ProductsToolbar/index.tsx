@@ -10,38 +10,42 @@ export const ProductsToolbar = () => {
     const handleHighestProducts = () => { console.log("Highest products..."); }
     return (
         <div className="toolbar">
-            <p className="toolbar__status">16 of 32 products</p>
-            <div className="toolbar__arrows">
-                <button className="toolbar__button" onClick={handleNextPage}>
-                    <img
-                        src={arrowLeft}
-                        alt="Previous page"
-                        className="toolbar__icon"
-                    />
-                </button>
-                <button className="toolbar__button" onClick={handlePreviousPage}>
-                    <img
-                        src={arrowRight}
-                        alt="Next page"
-                        className="toolbar__icon"
-                    />
-                </button>
+            <div className="toolbar__status">
+                <p className="toolbar__quantity">16 of 32 products</p>
             </div>
-            <div className="toolbar__sort">
-                <p className="toolbar__description">Sorted by:</p>
-                <div className="toolbar__buttons">
-                    <button
-                        className="toolbar__button toolbar__button--filter"
-                        onClick={handleMostRecentProducts}
-                    >Most recent</button>
-                    <button
-                        className="toolbar__button toolbar__button--filter"
-                        onClick={handleLowestProducts}
-                    >Lowest price</button>
-                    <button
-                        className="toolbar__button toolbar__button--filter"
-                        onClick={handleHighestProducts}
-                    >Highest price</button>
+            <div className="toolbar__actions">
+                <div className="toolbar__sort">
+                    <p className="toolbar__description">Sorted by:</p>
+                    <div className="toolbar__buttons">
+                        <button
+                            className="toolbar__button toolbar__button--filter"
+                            onClick={handleMostRecentProducts}
+                        >Most recent</button>
+                        <button
+                            className="toolbar__button toolbar__button--filter"
+                            onClick={handleLowestProducts}
+                        >Lowest price</button>
+                        <button
+                            className="toolbar__button toolbar__button--filter"
+                            onClick={handleHighestProducts}
+                        >Highest price</button>
+                    </div>
+                </div>
+                <div className="toolbar__arrows">
+                    <button className="toolbar__button" onClick={handleNextPage}>
+                        <img
+                            src={arrowLeft}
+                            alt="Previous page"
+                            className="toolbar__icon"
+                        />
+                    </button>
+                    <button className="toolbar__button" onClick={handlePreviousPage}>
+                        <img
+                            src={arrowRight}
+                            alt="Next page"
+                            className="toolbar__icon"
+                        />
+                    </button>
                 </div>
             </div>
         </div>
