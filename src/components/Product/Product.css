@@ -1,5 +1,5 @@
 .product {
-  --height-product: 16rem;
+  --height-product: 13rem;
   background-color: #fff;
   border-radius: 0.6rem;
   height: var(--height-product);
@@ -83,6 +83,7 @@
 }
 
 .product__name {
+  font-size: 0.9rem;
   margin: 0;
 }
 
