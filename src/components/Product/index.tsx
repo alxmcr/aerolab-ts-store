@@ -2,7 +2,7 @@ import { ProductProps } from "componentsTypes";
 import './Product.css';
 
 export const Product = ({ product }: ProductProps) => {
-    const { _id, name, category, cost, img } = product;
+    const { _id, name, category, img } = product;
     const handlerAddCart = () => {
         console.log("Add...", { product });
     }
