@@ -1,3 +1,4 @@
+import coin from 'assets/icons/coin.svg';
 import { ProductProps } from "componentsTypes";
 import './Product.css';
 
@@ -18,12 +19,17 @@ export const Product = ({ product }: ProductProps) => {
                 <p className="product__name">{name}</p>
             </figcaption>
             <div className="product__overlay" id="overlay-product">
-                <p className="product__cost">{cost} $</p>
+                <p className="product__cost">
+                    <span className="product__value"> {cost} </span>
+                    <span className="product__currency">
+                        <img src={coin} alt="Coin" />
+                    </span>
+                </p>
                 <button
                     className="product__button product__button--redeem"
                     onClick={handlerRedeemProduct}
                 >Redeem now</button>
             </div>
-        </figure>
+        </figure >
     )
 }
