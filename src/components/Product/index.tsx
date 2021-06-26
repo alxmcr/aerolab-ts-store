@@ -15,17 +15,17 @@ export const Product = ({ product }: ProductProps) => {
     }
     return (
         <figure className="product" id={_id}>
-            <button
-                className="product__buy"
-                onClick={handlerRedeemProduct}>
-                <img src={buyWhite} alt="buy" className="product__icon" />
-            </button>
             <img src={img.hdUrl} alt={altText} className="product__image" />
             <figcaption className="product__details">
                 <p className="product__category">{category}</p>
                 <p className="product__name">{name}</p>
             </figcaption>
             <div className="product__overlay" id="overlay-product">
+                <button
+                    className="product__buy"
+                    onClick={handlerAddCart}>
+                    <img src={buyWhite} alt="buy" className="product__icon" />
+                </button>
                 <p className="product__cost">
                     <span className="product__value"> {cost} </span>
                     <span className="product__currency">
