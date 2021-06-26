@@ -1,3 +1,5 @@
+import buyBlue from 'assets/icons/buy-blue.svg';
+import buyWhite from 'assets/icons/buy-white.svg';
 import coin from 'assets/icons/coin.svg';
 import { ProductProps } from "componentsTypes";
 import './Product.css';
@@ -13,6 +15,11 @@ export const Product = ({ product }: ProductProps) => {
     }
     return (
         <figure className="product" id={_id}>
+            <button
+                className="product__buy"
+                onClick={handlerRedeemProduct}>
+                <img src={buyWhite} alt="buy" className="product__icon" />
+            </button>
             <img src={img.hdUrl} alt={altText} className="product__image" />
             <figcaption className="product__details">
                 <p className="product__category">{category}</p>

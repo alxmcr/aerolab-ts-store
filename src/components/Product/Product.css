@@ -36,13 +36,42 @@
 
 .product__button {
   appearance: none;
+  background-color: transparent;
+  border: none;
+  display: block;
+  outline: none;
+}
+
+.product__buy {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
+}
+
+.product__buy--white {
+  background-color: white;
+}
+
+.product__buy--blue {
+  background-color: var(--bg-product);
+}
+
+.product__button--redeem {
   background-color: #fff;
   border: none;
   border-radius: 4rem;
-  display: block;
-  outline: none;
   padding: 0.5rem 0;
   width: 80%;
+}
+
+.product__icon {
+  background-color: var(--bg-product);
+  border-radius: 50%;
+  margin-bottom: -0.9rem;
 }
 
 .product__category {
