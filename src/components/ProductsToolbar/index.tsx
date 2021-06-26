@@ -9,6 +9,11 @@ export const ProductsToolbar = () => {
             <p className="filter__status">{quantityProducts} of {quantityTotalProducts}</p>
             <div className="filter__sort">
                 <p className="filter__description">Sorted by</p>
+                <div className="filter__buttons">
+                    <button className="filter__button">Most recent</button>
+                    <button className="filter__button">Lowest price</button>
+                    <button className="filter__button">Highest price</button>
+                </div>
             </div>
         </div>
     )
