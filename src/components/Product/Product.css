@@ -4,8 +4,9 @@
   padding: 0.5rem;
 }
 
-.product__category,
-.product__name {
+.product__category {
+  color: #cbcbcb;
+  font-size: 0.8rem;
   margin: 0;
 }
 
@@ -14,6 +15,12 @@
 }
 
 .product__img {
-  height: 11rem;
+  height: 8rem;
   width: 100%;
+}
+
+.product__name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
 }
