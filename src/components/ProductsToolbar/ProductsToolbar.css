@@ -6,17 +6,29 @@
   padding: 1rem 0;
 }
 
+.toolbar__arrows {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
 .toolbar__button {
   appearance: none;
+  background-color: transparent;
+  border: none;
+}
+
+.toolbar__button--filter {
   background-color: #e2e0e0;
   color: #9c9c9c;
-  border: none;
   border-radius: 4rem;
   font-size: 1.1rem;
   padding: 0.5rem 1.5rem;
 }
 
-.toolbar__button:hover {
+.toolbar__button--filter:hover {
   --bg-button: #31c2fc;
   background-color: var(--bg-button);
   color: #fff;
@@ -33,6 +45,18 @@
   color: #9c9c9c;
   font-size: 1.1rem;
   margin: 0;
+}
+
+.toolbar__icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.toolbar__icon:hover {
+  --bg-button: #31c2fc;
+  background-color: var(--bg-button);
+  border-radius: 50%;
+  color: #fff;
 }
 
 .toolbar__status {
@@ -60,31 +84,4 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .toolbar {
-    align-items: center;
-    border-bottom: 1px solid #c9c9c9;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    padding: 1rem 0;
-  }
-
-  .toolbar__sort {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
-
-  .toolbar__status {
-    border-right: 1px solid #c9c9c9;
-    margin: 0;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-    padding-right: 1rem;
-    text-align: left;
-  }
 }
