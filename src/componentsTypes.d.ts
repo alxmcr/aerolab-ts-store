@@ -7,3 +7,7 @@ export interface ProductProps {
 export interface GalleryProductsProps {
     products: ProductAPI[]
 }
+
+export interface CategoryHeaderProps {
+    categoryTitle: string
+}

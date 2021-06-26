@@ -1,0 +1,18 @@
+.banner {
+  height: 10%;
+  width: 100%;
+  position: relative;
+}
+
+.banner__image {
+  background-size: cover;
+  /* height: 2rem; */
+  width: 100%;
+}
+
+.banner__title {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+}
