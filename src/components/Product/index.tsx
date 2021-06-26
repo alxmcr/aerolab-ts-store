@@ -7,6 +7,9 @@ export const Product = ({ product }: ProductProps) => {
     const handlerAddCart = () => {
         console.log("Add...", { product });
     }
+    const handlerRedeemProduct = () => {
+        console.log("Redeem...", { product });
+    }
     return (
         <figure className="product" id={_id}>
             <img src={img.hdUrl} alt={altText} className="product__image">
@@ -17,7 +20,10 @@ export const Product = ({ product }: ProductProps) => {
             </figcaption>
             <div className="product__overlay" id="overlay-product">
                 <p className="product__cost">{cost} $</p>
-                <button className="product__button product__button--redeem">Redeem now</button>
+                <button
+                    className="product__button product__button--redeem"
+                    onClick={handlerRedeemProduct}
+                >Redeem now</button>
             </div>
         </figure>
     )
