@@ -9,8 +9,8 @@
 }
 
 .product:hover {
-  --bg-product: #40b3e0;
-  background-color: black;
+  --bg-product: #31c2fc;
+  background-color: var(--bg-product);
 }
 
 .product:hover .product__image {
@@ -22,11 +22,15 @@
 }
 
 .product:hover .product__category {
-  color: #dfdfdf;
+  color: #000000;
+  opacity: 0.2;
+}
+.product:hover .product__cost {
+  color: #fff;
 }
 
 .product:hover .product__name {
-  color: #fff;
+  opacity: 0.2;
 }
 
 .product__button {
