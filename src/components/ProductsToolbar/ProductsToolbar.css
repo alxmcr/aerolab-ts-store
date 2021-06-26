@@ -1,9 +1,90 @@
-.filter {
-  background-color: black;
-  color: #fff;
-  margin-bottom: 1.2rem;
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
 }
 
-.filter__status {
-  border-right: 1px solid #b3b3b3;
+.toolbar__button {
+  appearance: none;
+  background-color: #e2e0e0;
+  color: #9c9c9c;
+  border: none;
+  border-radius: 4rem;
+  font-size: 1.1rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.toolbar__button:hover {
+  --bg-button: #31c2fc;
+  background-color: var(--bg-button);
+  color: #fff;
+}
+
+.toolbar__buttons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.toolbar__description {
+  color: #9c9c9c;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.toolbar__status {
+  font-size: 1.1rem;
+  margin: 0;
+  text-align: center;
+}
+
+.toolbar__sort {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .toolbar__buttons {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .toolbar {
+    align-items: center;
+    border-bottom: 1px solid #c9c9c9;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+  }
+
+  .toolbar__sort {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .toolbar__status {
+    border-right: 1px solid #c9c9c9;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    text-align: left;
+  }
 }

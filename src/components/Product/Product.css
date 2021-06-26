@@ -1,7 +1,6 @@
 .product {
   --height-product: 13rem;
   background-color: #fff;
-  border-radius: 0.6rem;
   height: var(--height-product);
   margin: 0 auto;
   padding: 0.5rem 1rem;
