@@ -1,14 +1,14 @@
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 0.5rem;
+  grid-gap: 1rem;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 600px) {
   .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.2rem;
+    grid-gap: 1rem;
   }
 }
 
@@ -16,7 +16,7 @@
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.2rem;
+    grid-gap: 1rem;
   }
 }
 
@@ -24,6 +24,6 @@
   .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1.2rem;
+    grid-gap: 1rem;
   }
 }
