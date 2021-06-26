@@ -12,8 +12,7 @@ export const Product = ({ product }: ProductProps) => {
     }
     return (
         <figure className="product" id={_id}>
-            <img src={img.hdUrl} alt={altText} className="product__image">
-            </img>
+            <img src={img.hdUrl} alt={altText} className="product__image" />
             <figcaption className="product__details">
                 <p className="product__category">{category}</p>
                 <p className="product__name">{name}</p>
