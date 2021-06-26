@@ -35,6 +35,10 @@
   margin: 0;
 }
 
+.product__cost {
+  font-size: 2rem;
+}
+
 .product__details {
   display: flex;
   flex-direction: column;
