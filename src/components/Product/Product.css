@@ -11,6 +11,7 @@
 .product:hover {
   --bg-product: #31c2fc;
   background-color: var(--bg-product);
+  box-shadow: 7px 8px 9px 2px #9c9c9c;
   transform: translateY(-0.5rem);
 }
 
