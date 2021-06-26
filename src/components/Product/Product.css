@@ -12,6 +12,7 @@
 .product:hover {
   --bg-product: #31c2fc;
   background-color: var(--bg-product);
+  transform: translateY(-0.5rem);
 }
 
 .product:hover .product__image {
