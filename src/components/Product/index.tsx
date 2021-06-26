@@ -9,7 +9,6 @@ export const Product = ({ product }: ProductProps) => {
     return (
         <div className="product" id={_id}>
             <div className="product__header">
-                <img src={img.url} alt={`Product: ${name}`} className="product__img" />
                 <button
                     className="product__btn product__btn--cart"
                     onClick={handlerAddCart}
@@ -18,8 +17,11 @@ export const Product = ({ product }: ProductProps) => {
                 </button>
             </div>
             <div className="product__body">
+                <img src={img.url} alt={`Product: ${name}`} className="product__img" />
+            </div>
+            <div className="product__details">
                 <p className="product__category">{category}</p>
-                <p className="product__cost">{cost}</p>
+                <p className="product__name">{name}</p>
             </div>
         </div>
     )

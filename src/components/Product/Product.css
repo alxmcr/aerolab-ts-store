@@ -1,10 +1,19 @@
 .product {
-  background-color: #000;
-  border-radius: 0.5rem;
-  color: #fff;
+  background-color: #fff;
+  box-shadow: 4px 3px #e8e8e8;
+  padding: 0.5rem;
+}
+
+.product__category,
+.product__name {
+  margin: 0;
+}
+
+.product__details {
+  padding: 1rem 0.5rem;
 }
 
 .product__img {
-  height: 7rem;
-  width: 10rem;
+  height: 11rem;
+  width: 100%;
 }
