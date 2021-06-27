@@ -21,7 +21,7 @@ export const Product = ({ product }: ProductProps) => {
         console.log("Redeem...", { product });
     }
     return (
-        <figure className="product" id={_id}>
+        <figure className={`product ${me?.points >= cost && 'product--posible'}`} id={_id}>
             {me?.points >= cost
                 ? (
                     <button
@@ -43,23 +43,28 @@ export const Product = ({ product }: ProductProps) => {
                 <p className="product__category">{category}</p>
                 <p className="product__name">{name}</p>
             </figcaption>
-            <div className="product__overlay" id="overlay-product">
-                <button
-                    className="product__buy product__buy--white"
-                    onClick={handlerAddCart}>
-                    <img src={buyWhite} alt="buy" className="product__icon" />
-                </button>
-                <p className="product__cost">
-                    <span className="product__value"> {cost} </span>
-                    <span className="product__currency">
-                        <img src={coin} alt="Coin" />
-                    </span>
-                </p>
-                <button
-                    className="product__button product__button--redeem"
-                    onClick={handlerRedeemProduct}
-                >Redeem now</button>
-            </div>
+            {me?.points >= cost && (
+                <div className="product__overlay" id="overlay-product">
+
+                    <button
+                        className="product__buy product__buy--white"
+                        onClick={handlerAddCart}>
+                        <img src={buyWhite} alt="buy" className="product__icon" />
+                    </button>
+
+                    <p className="product__cost">
+                        <span className="product__value"> {cost} </span>
+                        <span className="product__currency">
+                            <img src={coin} alt="Coin" />
+                        </span>
+                    </p>
+                    <button
+                        className="product__button product__button--redeem"
+                        onClick={handlerRedeemProduct}
+                    >Redeem now</button>
+                </div>
+            )
+            }
         </figure >
     )
 }
