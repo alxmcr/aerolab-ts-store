@@ -31,7 +31,7 @@
   color: #fff;
 }
 
-.product:hover .product__name {
+.product--posible:hover .product__name {
   opacity: 0.2;
 }
 
