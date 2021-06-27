@@ -5,8 +5,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
+  margin: 2rem 0;
+  padding: 1rem 0;
 }
 
 .toolbar__actions {
