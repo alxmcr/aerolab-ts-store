@@ -1,0 +1,55 @@
+.header {
+  padding: 1rem 0;
+}
+
+.header__icon--coin {
+  height: 1.6rem;
+  margin-bottom: -0.2rem;
+}
+
+.header__icon--logo {
+  height: 2rem;
+}
+
+.header__link {
+  align-items: center;
+  color: #7b7a7a;
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.header__link:active {
+  color: #7b7a7a;
+}
+
+.header__list {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.header__points {
+  align-items: center;
+  background-color: #e6e6e6;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.5rem;
+}
+
+.header__value {
+  margin: 0;
+}
