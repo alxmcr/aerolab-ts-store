@@ -1,26 +1,5 @@
+import { ACTION_TYPES_TOOLBAR_PRODUCTS, ProductsToolbarReducerState } from "componentsTypes";
 import { handlerSortHighest, handlerSortLowest, handlerSortRecent } from "helpers/toolbarProductsHelpers";
-import { ProductAPI } from "types";
-
-
-export interface ProductsToolbarReducerState {
-    methodSort: "lowest" | "highest" | "recent"
-    products: ProductAPI[]
-}
-
-// Actions Types
-export type ACTION_TYPES_TOOLBAR_PRODUCTS =
-    | { type: "lowest" }
-    | { type: "highest" }
-    | { type: "recent" }
-    | { type: "changeMethodSort", payload: ProductsToolbarReducerState }
-
-export interface ProductsToolbarProps {
-    dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
-}
-
-export interface SectionProductsProps {
-    dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
-}
 
 // Initial state
 export const initialStateToolbarReducer: ProductsToolbarReducerState = {
@@ -33,7 +12,7 @@ export const toolbarReducer = (state: ProductsToolbarReducerState, action: ACTIO
     const currentProducts = state?.products ? [...state?.products] : []
     switch (action.type) {
         case "changeMethodSort":
-            return { methodSort: action.payload.methodSort, products: currentProducts }
+            return { methodSort: action.payload.methodSort }
         case "lowest":
             return { ...state, products: [...currentProducts].sort(handlerSortLowest) }
         case "highest":

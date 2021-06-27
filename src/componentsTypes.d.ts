@@ -9,6 +9,7 @@ export interface ProductProps {
 
 export interface GalleryProductsProps {
     products: ProductAPI[]
+    dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
 }
 
 export interface CategoryBannerProps {
@@ -26,4 +27,25 @@ export interface UserContextProps {
 export interface PointsPillProps {
     children: React.ReactNode
     variant: string
+}
+
+// Reducer: state
+export interface ProductsToolbarReducerState {
+    methodSort: "lowest" | "highest" | "recent"
+    products?: ProductAPI[]
+}
+
+//  Reducer: Actions Types
+export type ACTION_TYPES_TOOLBAR_PRODUCTS =
+    | { type: "lowest" }
+    | { type: "highest" }
+    | { type: "recent" }
+    | { type: "changeMethodSort", payload: ProductsToolbarReducerState }
+
+export interface ProductsToolbarProps {
+    dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
+}
+
+export interface SectionProductsProps {
+    dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
 }

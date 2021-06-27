@@ -5,6 +5,7 @@ import { initialStateToolbarReducer, toolbarReducer } from "reducers/toolbarRedu
 
 export const SectionProducts = () => {
     const [state, dispatch] = useReducer(toolbarReducer, initialStateToolbarReducer)
+    console.log({ state })
     return (
         <section className="products">
             <ProductsToolbar dispatch={dispatch} />

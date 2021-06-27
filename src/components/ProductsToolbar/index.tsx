@@ -1,22 +1,26 @@
 import arrowLeft from "assets/icons/arrow-left.svg";
 import arrowRight from "assets/icons/arrow-right.svg";
-import { ProductsToolbarProps } from "reducers/toolbarReducer";
+import { ProductsToolbarProps } from "componentsTypes";
 import './ProductsToolbar.css';
 
 export const ProductsToolbar = ({ dispatch }: ProductsToolbarProps) => {
-    const handleNextPage = () => { console.log("Next page..."); }
-    const handlePreviousPage = () => { console.log("Previous page..."); }
+    const handleNextPage = () => {
+        console.log("Next page...");
+    }
+    const handlePreviousPage = () => {
+        console.log("Previous page...");
+    }
     const handleMostRecentProducts = () => {
         console.log("Most Recent products...");
-        dispatch({ type: "changeMethodSort", payload: { methodSort: "recent", products: [] } })
+        dispatch({ type: "changeMethodSort", payload: { methodSort: "recent" } })
     }
     const handleLowestProducts = () => {
         console.log("Lowest products...");
-        dispatch({ type: "changeMethodSort", payload: { methodSort: "lowest", products: [] } })
+        dispatch({ type: "changeMethodSort", payload: { methodSort: "lowest" } })
     }
     const handleHighestProducts = () => {
         console.log("Highest products...");
-        dispatch({ type: "changeMethodSort", payload: { methodSort: "highest", products: [] } })
+        dispatch({ type: "changeMethodSort", payload: { methodSort: "highest" } })
     }
     return (
         <div className="toolbar">
