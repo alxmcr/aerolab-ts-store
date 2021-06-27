@@ -13,7 +13,7 @@ export interface GalleryProductsProps {
 
 export type MethodSort = "lowest" | "highest" | "recent"
 
-export interface ProductsUseHookProps {
+export interface UseProductsHookProps {
     methodSort: string
 }
 
@@ -53,6 +53,10 @@ export type ACTION_TYPES_TOOLBAR_PRODUCTS =
 
 export interface ProductsToolbarProps {
     setMethodSort: (methodSort: string) => void
+}
+
+export interface ProductsHelperProps {
+    setProducts: (products: ProductAPI[]) => void
 }
 
 export interface SectionProductsProps {
