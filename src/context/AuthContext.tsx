@@ -1,4 +1,4 @@
+import { UserContextProps } from "componentsTypes";
 import * as React from "react";
-import { UserAPI } from "types";
 
-export const AuthContext = React.createContext<UserAPI | null>(null);
+export const AuthContext = React.createContext<UserContextProps | null>(null);

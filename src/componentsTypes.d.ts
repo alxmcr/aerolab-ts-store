@@ -25,19 +25,25 @@ export interface AppHeaderProps {
     me: UserAPI | null
 }
 
-export interface UserContextProps {
-    me: UserAPI | null
-}
+
 
 export interface PointsPillProps {
     children: React.ReactNode
     variant: string
 }
 
+export interface PointsPayload {
+    points: number
+}
+
 // Reducer: state
 export interface ProductsToolbarReducerState {
     methodSort: MethodSort
     products?: ProductAPI[]
+}
+
+export interface UserReducerState {
+    me: UserAPI
 }
 
 //  Reducer: Actions Types
@@ -47,9 +53,10 @@ export type ACTION_TYPES_TOOLBAR_PRODUCTS =
     | { type: "recent" }
     | { type: "changeMethodSort", payload: ProductsToolbarReducerState }
 
-// export interface ProductsToolbarProps {
-//     dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
-// }
+// actions types
+export type ACTION_TYPES_USER =
+    | { type: "incrementPoints", payload: PointsPayload }
+    | { type: "decrementPoints", payload: PointsPayload }
 
 export interface ProductsToolbarProps {
     methodSort: string
@@ -62,4 +69,11 @@ export interface ProductsHelperProps {
 
 export interface SectionProductsProps {
     dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
+}
+
+// Context
+export interface UserContextProps {
+    me: UserAPI
+    dispatch: React.Dispatch<ACTION_TYPES_USER>
+    loading: boolean
 }
