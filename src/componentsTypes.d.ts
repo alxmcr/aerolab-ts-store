@@ -8,6 +8,6 @@ export interface GalleryProductsProps {
     products: ProductAPI[]
 }
 
-export interface CategoryHeaderProps {
+export interface CategoryBannerProps {
     categoryTitle: string
 }

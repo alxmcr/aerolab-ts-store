@@ -1,9 +1,9 @@
 .banner {
   background-image: url("assets/header.png");
-  background-position: center;
+  background-position: 98% 0%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 7.5rem;
+  height: 9.5rem;
   position: relative;
 }
 
@@ -13,13 +13,13 @@
 
 @media screen and (min-width: 600px) {
   .banner {
-    height: 10rem;
+    height: 12rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   .banner {
-    height: 12rem;
+    height: 14rem;
   }
 }
 
