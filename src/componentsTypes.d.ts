@@ -74,6 +74,8 @@ export interface SectionProductsProps {
 // Context
 export interface UserContextProps {
     me: UserAPI
-    dispatch: React.Dispatch<ACTION_TYPES_USER>
-    loading: boolean
+}
+
+export interface SwitchRoutesAppProps {
+    isAuthenticated: boolean
 }
