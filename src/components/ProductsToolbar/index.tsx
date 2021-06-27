@@ -24,15 +24,15 @@ export const ProductsToolbar = ({ methodSort, setMethodSort }: ProductsToolbarPr
                     <p className="toolbar__description">Sort by:</p>
                     <div className="toolbar__buttons">
                         <button
-                            className={`toolbar__button toolbar__button--filter`}
+                            className={`toolbar__button ${methodSort === "recent" && 'toolbar__button--selected'} toolbar__button--filter`}
                             onClick={handleMostRecentProducts}
                         >Most recent</button>
                         <button
-                            className={`toolbar__button toolbar__button--filter`}
+                            className={`toolbar__button ${methodSort === "lowest" && 'toolbar__button--selected'} toolbar__button--filter`}
                             onClick={handleLowestProducts}
                         >Lowest price</button>
                         <button
-                            className={`toolbar__button toolbar__button--filter`}
+                            className={`toolbar__button ${methodSort === "highest" && 'toolbar__button--selected'} toolbar__button--filter`}
                             onClick={handleHighestProducts}
                         >Highest price</button>
                     </div>

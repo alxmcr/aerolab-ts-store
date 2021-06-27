@@ -52,6 +52,7 @@ export type ACTION_TYPES_TOOLBAR_PRODUCTS =
 // }
 
 export interface ProductsToolbarProps {
+    methodSort: string
     setMethodSort: (methodSort: string) => void
 }
 
