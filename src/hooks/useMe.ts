@@ -3,7 +3,14 @@ import { getMe } from "services/UserService";
 import { UserAPI } from "types";
 
 export const useMe = () => {
-    const [me, setMe] = useState<UserAPI | null>(null);
+    const invalidUser: UserAPI = {
+        id: "-1",
+        name: "",
+        points: 0,
+        redeemHistory: [],
+        createDate: new Date()
+    }
+    const [me, setMe] = useState<UserAPI>(invalidUser);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<Error | null>(null);
 
