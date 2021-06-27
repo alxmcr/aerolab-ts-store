@@ -19,3 +19,7 @@ export interface AppHeaderProps {
 export interface UserContextProps {
     me: UserAPI | null
 }
+
+export interface PointsPillProps {
+    children: React.ReactNode
+}
