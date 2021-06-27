@@ -8,8 +8,7 @@ export interface ProductProps {
 }
 
 export interface GalleryProductsProps {
-    products: ProductAPI[]
-    dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
+    methodSort: string
 }
 
 export interface CategoryBannerProps {
@@ -42,8 +41,12 @@ export type ACTION_TYPES_TOOLBAR_PRODUCTS =
     | { type: "recent" }
     | { type: "changeMethodSort", payload: ProductsToolbarReducerState }
 
+// export interface ProductsToolbarProps {
+//     dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
+// }
+
 export interface ProductsToolbarProps {
-    dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
+    setMethodSort: (methodSort: string) => void
 }
 
 export interface SectionProductsProps {
