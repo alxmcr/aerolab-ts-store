@@ -25,6 +25,7 @@
 
 @media screen and (min-width: 1024px) {
   .banner {
-    height: 17rem;
+    background-position: 0% 3%;
+    height: 19.5rem;
   }
 }
