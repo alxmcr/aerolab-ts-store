@@ -79,3 +79,7 @@ export interface UserContextProps {
 export interface SwitchRoutesAppProps {
     isAuthenticated: boolean
 }
+
+export interface PublicRouteAppProps {
+    isAuthenticated: boolean
+}
