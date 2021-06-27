@@ -6,12 +6,12 @@ import './CategoryHeader.css'
 export const CategoryHeader = ({ categoryTitle }: CategoryHeaderProps) => {
     return (
         <section className="banner">
-            <img
+            {/* <img
                 src={header}
                 alt={`Banner ${categoryTitle}`}
                 className="banner__image"
-            />
-            <h1 className="banner__title">{categoryTitle}</h1>
+            /> */}
+            {/* <h1 className="banner__title">{categoryTitle}</h1> */}
         </section>
     )
 }
