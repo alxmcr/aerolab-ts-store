@@ -7,7 +7,8 @@
         "_id": "5a0b35df734d1d08bf7084cb",
         "name": "Macbook Pro",
         "cost": 12000,
-        "category": "Laptops"
+        "category": "Laptops",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -17,7 +18,8 @@
         "_id": "5a0b3600734d1d08bf7084e5",
         "name": "Canon EOS 5D",
         "cost": 2200,
-        "category": "Cameras"
+        "category": "Cameras",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -27,7 +29,8 @@
         "_id": "5a0b3658734d1d08bf70850f",
         "name": "Amazon Echo",
         "cost": 150,
-        "category": "Smart Home"
+        "category": "Smart Home",
+        "createDate": 1591329600000
     },
     {
         "img": {
@@ -37,7 +40,8 @@
         "_id": "5a0b35f0734d1d08bf7084df",
         "name": "Marshall Major ll",
         "cost": 300,
-        "category": "Audio"
+        "category": "Audio",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -47,7 +51,8 @@
         "_id": "5a0b35f8734d1d08bf7084e3",
         "name": "Razer Blade Pro",
         "cost": 14000,
-        "category": "Laptops"
+        "category": "Laptops",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -57,7 +62,8 @@
         "_id": "5a0b3640734d1d08bf708500",
         "name": "Google Chromecast",
         "cost": 100,
-        "category": "Monitors & TV"
+        "category": "Monitors & TV",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -67,7 +73,8 @@
         "_id": "5a0b364f734d1d08bf708506",
         "name": "Razer Naga Chroma",
         "cost": 50,
-        "category": "PC Accessories"
+        "category": "PC Accessories",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -77,7 +84,8 @@
         "_id": "5a0b3660734d1d08bf708511",
         "name": "Beats Pro",
         "cost": 220,
-        "category": "Audio"
+        "category": "Audio",
+        "createDate": 1591329600000
     },
     {
         "img": {
@@ -87,7 +95,8 @@
         "_id": "5a0b3668734d1d08bf708516",
         "name": "Lenovo Yoga Book 10”",
         "cost": 250,
-        "category": "Laptops"
+        "category": "Laptops",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -97,7 +106,8 @@
         "_id": "5a0b36b3734d1d08bf70856f",
         "name": "Alienware 13",
         "cost": 1500,
-        "category": "Laptops"
+        "category": "Laptops",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -107,7 +117,8 @@
         "_id": "5a0b35d7734d1d08bf7084c9",
         "name": "Nintendo Switch 32GB",
         "cost": 300,
-        "category": "Gaming"
+        "category": "Gaming",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -117,7 +128,8 @@
         "_id": "5a0b3609734d1d08bf7084e6",
         "name": "Dell UP3218k",
         "cost": 900,
-        "category": "Monitors & TV"
+        "category": "Monitors & TV",
+        "createDate": 1591329600000
     },
     {
         "img": {
@@ -127,7 +139,8 @@
         "_id": "5a0b362f734d1d08bf7084fa",
         "name": "Sony SRS-X11",
         "cost": 330,
-        "category": "Audio"
+        "category": "Audio",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -137,7 +150,8 @@
         "_id": "5a0b3628734d1d08bf7084f3",
         "name": "Sony PS4",
         "cost": 200,
-        "category": "Gaming"
+        "category": "Gaming",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -147,7 +161,8 @@
         "_id": "5a0b3620734d1d08bf7084f0",
         "name": "Amazon Echo Dot",
         "cost": 50,
-        "category": "Smart Home"
+        "category": "Smart Home",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -157,7 +172,8 @@
         "_id": "5a0b3678734d1d08bf708537",
         "name": "Go Pro Hero4",
         "cost": 330,
-        "category": "Cameras"
+        "category": "Cameras",
+        "createDate": 1591329600000
     },
     {
         "img": {
@@ -167,7 +183,8 @@
         "_id": "5a0b36ac734d1d08bf70856c",
         "name": "Acer Aspire E1-522",
         "cost": 600,
-        "category": "Laptops"
+        "category": "Laptops",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -177,7 +194,8 @@
         "_id": "5a0b3680734d1d08bf70853b",
         "name": "iPad Mini",
         "cost": 280,
-        "category": "Tablets & E-readers"
+        "category": "Tablets & E-readers",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -187,7 +205,8 @@
         "_id": "5a0b35e8734d1d08bf7084cf",
         "name": "Instax Mini 8",
         "cost": 80,
-        "category": "Cameras"
+        "category": "Cameras",
+        "createDate": 1591329600000
     },
     {
         "img": {
@@ -197,7 +216,8 @@
         "_id": "5a0b36c3734d1d08bf70857f",
         "name": "Kobo Aura",
         "cost": 150,
-        "category": "Tablets & E-readers"
+        "category": "Tablets & E-readers",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -207,7 +227,8 @@
         "_id": "5a0b3637734d1d08bf7084fb",
         "name": "Samsung S8",
         "cost": 510,
-        "category": "Phones"
+        "category": "Phones",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -217,7 +238,8 @@
         "_id": "5a0b368e734d1d08bf708558",
         "name": "Parrot AR",
         "cost": 200,
-        "category": "Drones"
+        "category": "Drones",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -227,7 +249,8 @@
         "_id": "5a0b3618734d1d08bf7084ec",
         "name": "Android Wear",
         "cost": 210,
-        "category": "Phone Accessories"
+        "category": "Phone Accessories",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -237,7 +260,8 @@
         "_id": "5a0b35c1734d1d08bf7084c3",
         "name": "iPhone 8",
         "cost": 800,
-        "category": "Phones"
+        "category": "Phones",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -247,7 +271,8 @@
         "_id": "5a0b3648734d1d08bf708502",
         "name": "Nintendo 3DS",
         "cost": 200,
-        "category": "Gaming"
+        "category": "Gaming",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -257,7 +282,8 @@
         "_id": "5a0b36a5734d1d08bf70856b",
         "name": "Razer Blackwidow Chroma",
         "cost": 100,
-        "category": "PC Accesories"
+        "category": "PC Accesories",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -267,7 +293,8 @@
         "_id": "5a0b36bb734d1d08bf70857e",
         "name": "Samsung Tab S2",
         "cost": 230,
-        "category": "Tablets & E-readers"
+        "category": "Tablets & E-readers",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -277,7 +304,8 @@
         "_id": "5a0b3695734d1d08bf70855d",
         "name": "Lenovo Yoga Tab 3",
         "cost": 200,
-        "category": "Tablets & E-readers"
+        "category": "Tablets & E-readers",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -287,7 +315,8 @@
         "_id": "5a0b3611734d1d08bf7084eb",
         "name": "Phantom 2",
         "cost": 500,
-        "category": "Drones"
+        "category": "Drones",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -297,7 +326,8 @@
         "_id": "5a0b3670734d1d08bf70851f",
         "name": "Sony DSC-RX10",
         "cost": 1200,
-        "category": "Cameras"
+        "category": "Cameras",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -307,7 +337,8 @@
         "_id": "5a0b3687734d1d08bf70854d",
         "name": "Nikon D300",
         "cost": 220,
-        "category": "Cameras"
+        "category": "Cameras",
+        "createDate": 1624773388541
     },
     {
         "img": {
@@ -317,6 +348,7 @@
         "_id": "5a0b369e734d1d08bf708567",
         "name": "Moto G5",
         "cost": 230,
-        "category": "Phones"
+        "category": "Phones",
+        "createDate": 1624773388541
     }
 ]

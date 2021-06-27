@@ -24,3 +24,11 @@ export interface PointsPillProps {
     children: React.ReactNode
     variant: string
 }
+
+export interface ProductsToolbarProps {
+    setMethodSort: (methodSort: string) => void
+}
+
+export interface ProductsToolbarState {
+    methodSort?: string | undefined
+}

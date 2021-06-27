@@ -12,8 +12,8 @@ export interface UserAPI {
     id: string
     name: string
     points: number
-    redeemHistory: RedeemAPI[],
-    createDate: date
+    redeemHistory: RedeemAPI[]
+    createDate: Date
 }
 
 export interface ProductAPI {
@@ -22,6 +22,7 @@ export interface ProductAPI {
     cost: number
     category: CategoryType
     img: ImageAPI
+    createDate: number
 }
 
 export interface History {
