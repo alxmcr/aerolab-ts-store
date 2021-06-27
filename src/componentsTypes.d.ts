@@ -32,15 +32,18 @@ export interface ProductsToolbarProps {
 }
 
 // Reducers: Action types
-export type ACTION_TYPES =
+export type ACTION_TYPES_TOOLBAR_PRODUCTS =
     | { type: "lowest" }
     | { type: "highest" }
     | { type: "recent" }
+    | { type: "changeMethodSort", payload: ProductsToolbarReducerState }
 
-export interface ToolbarReducerState {
-    methodSort?: string | undefined
+export interface ProductsToolbarReducerState {
+    methodSort?: "lowest" | "highest" | "recent" | undefined
+    products: ProductAPI[]
 }
 
-export interface ToolbarReducerProps {
-    dispatch: React.Dispatch<ACTION_TYPES>
+export interface SectionProductsProps {
+    dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
 }
+
