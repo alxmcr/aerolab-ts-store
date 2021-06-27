@@ -1,8 +1,9 @@
+import { ProductsUseHookProps } from "componentsTypes";
 import { useEffect, useState } from "react";
 import { getProducts } from "services/ProductService";
 import { ProductAPI } from "types";
 
-export const useProducts = () => {
+export const useProducts = ({ methodSort }: ProductsUseHookProps) => {
     const [products, setProducts] = useState<ProductAPI[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<Error | null>(null);
@@ -11,7 +12,9 @@ export const useProducts = () => {
         setLoading(true);
         getProducts()
             .then(response => response.json())
-            .then((data: ProductAPI[]) => setProducts(data))
+            .then((data: ProductAPI[]) => {
+                setProducts(data)
+            })
             .catch(error => setError(error))
             .finally(() => {
                 setLoading(false);

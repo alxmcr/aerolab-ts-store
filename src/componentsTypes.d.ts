@@ -11,6 +11,12 @@ export interface GalleryProductsProps {
     methodSort: string
 }
 
+export type MethodSort = "lowest" | "highest" | "recent"
+
+export interface ProductsUseHookProps {
+    methodSort: string
+}
+
 export interface CategoryBannerProps {
     categoryTitle: string
 }
@@ -30,7 +36,7 @@ export interface PointsPillProps {
 
 // Reducer: state
 export interface ProductsToolbarReducerState {
-    methodSort: "lowest" | "highest" | "recent"
+    methodSort: MethodSort
     products?: ProductAPI[]
 }
 
