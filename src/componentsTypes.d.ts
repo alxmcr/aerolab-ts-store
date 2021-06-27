@@ -14,8 +14,6 @@ export interface CategoryBannerProps {
 
 export interface AppHeaderProps {
     me: UserAPI | null
-    error: Error | null
-    loading: boolean
 }
 
 export interface UserContextProps {

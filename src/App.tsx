@@ -1,3 +1,4 @@
+import { UserContextProps } from 'componentsTypes';
 import { AuthContext } from 'context/AuthContext';
 import { useMe } from 'hooks/useMe';
 import { BrowserRouter } from 'react-router-dom';
@@ -6,6 +7,7 @@ import styles from './App.module.css';
 
 function App() {
   const { me } = useMe();
+
   return (
     <BrowserRouter>
       <AuthContext.Provider value={me}>

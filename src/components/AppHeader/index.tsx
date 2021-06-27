@@ -1,13 +1,9 @@
 import coin from 'assets/icons/coin.svg'
 import logo from 'assets/logo.svg'
-import { AppHeaderProps } from 'componentsTypes'
+import { UserContextProps } from 'componentsTypes'
 import "./AppHeader.css"
 
-
-export const AppHeader = ({ me, error, loading }: AppHeaderProps) => {
-    if (loading) return <p>Loading user...</p>
-    if (error !== null) return <p>There was an error while user was loading.</p>
-
+export const AppHeader = ({ me }: UserContextProps) => {
     return (
         <header className="header">
             <nav className="header__nav">
