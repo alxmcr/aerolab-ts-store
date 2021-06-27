@@ -1,9 +1,14 @@
 import coin from 'assets/icons/coin.svg'
 import logo from 'assets/logo.svg'
-import { UserContextProps } from 'componentsTypes'
+import { AuthContext } from 'context/AuthContext'
+import { useContext } from 'react'
 import "./AppHeader.css"
 
-export const AppHeader = ({ me }: UserContextProps) => {
+export const AppHeader = () => {
+    const me = useContext(AuthContext);
+
+    if (me === null) return <p>User is not valid</p>
+
     return (
         <header className="header">
             <nav className="header__nav">

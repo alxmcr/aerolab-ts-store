@@ -6,10 +6,9 @@ import { useContext } from 'react';
 import './HomePage.css';
 
 export const HomePage = () => {
-    const me = useContext(AuthContext);
     return (
         <>
-            <AppHeader me={me} />
+            <AppHeader />
             <CategoryBanner categoryTitle="Electronics" />
             <section className="home__container">
                 <SectionProducts />
