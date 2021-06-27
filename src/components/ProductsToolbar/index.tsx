@@ -15,7 +15,7 @@ export const ProductsToolbar = () => {
             </div>
             <div className="toolbar__actions">
                 <div className="toolbar__sort">
-                    <p className="toolbar__description">Sorted by:</p>
+                    <p className="toolbar__description">Sort by:</p>
                     <div className="toolbar__buttons">
                         <button
                             className="toolbar__button toolbar__button--filter"

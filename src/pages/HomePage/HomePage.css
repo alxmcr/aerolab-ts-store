@@ -1,6 +1,6 @@
 .home__container {
   margin: 0 auto;
-  padding: 0 0.5rem;
+  padding: 1.5rem 0.5rem;
 }
 
 @media screen and (min-width: 600px) {
