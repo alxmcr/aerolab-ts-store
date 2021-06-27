@@ -22,4 +22,5 @@ export interface UserContextProps {
 
 export interface PointsPillProps {
     children: React.ReactNode
+    variant: string
 }

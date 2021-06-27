@@ -31,7 +31,7 @@ export const Product = ({ product }: ProductProps) => {
                     </button>
                 )
                 : (
-                    <PointsPill>
+                    <PointsPill variant="pill--need">
                         <>
                             You need ({cost - me?.points} )
                         </>

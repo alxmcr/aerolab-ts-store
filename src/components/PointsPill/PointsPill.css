@@ -15,6 +15,15 @@
   margin-bottom: -0.2rem;
 }
 
+.pill--need {
+  background-color: black;
+  color: #fff;
+  font-size: 0.7rem;
+  opacity: 0.7;
+  position: absolute;
+  right: 1rem;
+}
+
 .pill__value {
   margin: 0;
 }
