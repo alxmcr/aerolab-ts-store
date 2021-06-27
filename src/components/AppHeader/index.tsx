@@ -1,9 +1,15 @@
 import coin from 'assets/icons/coin.svg'
 import logo from 'assets/logo.svg'
+import { useMe } from 'hooks/useMe'
 import "./AppHeader.css"
 
 
 export const AppHeader = () => {
+    const { me, error, loading } = useMe()
+
+    if (loading) return <p>Loading user...</p>
+    if (error !== null) return <p>There was an error while user was loading.</p>
+
     return (
         <header className="header">
             <nav className="header__nav">
@@ -19,9 +25,9 @@ export const AppHeader = () => {
                     </li>
                     <li className="header__item">
                         <a href="/john" className="header__link">
-                            <span className="header__name">John Kite</span>
+                            <span className="header__name">{me?.name}</span>
                             <div className="header__points">
-                                <p className="header__value">6000</p>
+                                <p className="header__value">{me?.points}</p>
                                 <img
                                     src={coin}
                                     alt="Coin"
