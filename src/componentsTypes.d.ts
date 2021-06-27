@@ -1,4 +1,5 @@
 import React, { Dispatch } from "react";
+import { ACTION_TYPES_TOOLBAR_PRODUCTS } from "reducers/toolbarReducer";
 import { ProductAPI, UserAPI } from "types";
 
 // Props
@@ -28,18 +29,11 @@ export interface PointsPillProps {
 }
 
 export interface ProductsToolbarProps {
-    setMethodSort: (methodSort: string) => void
+    dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
 }
 
-// Reducers: Action types
-export type ACTION_TYPES_TOOLBAR_PRODUCTS =
-    | { type: "lowest" }
-    | { type: "highest" }
-    | { type: "recent" }
-    | { type: "changeMethodSort", payload: ProductsToolbarReducerState }
-
 export interface ProductsToolbarReducerState {
-    methodSort?: "lowest" | "highest" | "recent" | undefined
+    methodSort: "lowest" | "highest" | "recent"
     products: ProductAPI[]
 }
 

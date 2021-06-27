@@ -1,17 +1,31 @@
-import { ACTION_TYPES_TOOLBAR_PRODUCTS, ProductsToolbarReducerState } from "componentsTypes";
+import { ProductsToolbarReducerState } from "componentsTypes";
 import { handlerSortHighest, handlerSortLowest, handlerSortRecent } from "helpers/toolbarProductsHelpers";
 
+// Initial state
+export const initialStateToolbarReducer: ProductsToolbarReducerState = {
+    methodSort: "recent",
+    products: []
+}
+
+// Actions Types
+export type ACTION_TYPES_TOOLBAR_PRODUCTS =
+    | { type: "lowest" }
+    | { type: "highest" }
+    | { type: "recent" }
+    | { type: "changeMethodSort", payload: ProductsToolbarReducerState }
+
+// Toolbar reducer
 export const toolbarReducer = (state: ProductsToolbarReducerState, action: ACTION_TYPES_TOOLBAR_PRODUCTS) => {
     const currentProducts = state?.products ? [...state?.products] : []
     switch (action.type) {
         case "changeMethodSort":
-            return { methodSort: action.payload.methodSort }
+            return { methodSort: action.payload.methodSort, products: currentProducts }
         case "lowest":
-            return { products: [...currentProducts].sort(handlerSortLowest) }
+            return { ...state, products: [...currentProducts].sort(handlerSortLowest) }
         case "highest":
-            return { products: [...currentProducts].sort(handlerSortHighest) }
+            return { ...state, products: [...currentProducts].sort(handlerSortHighest) }
         case "recent":
-            return { products: [...currentProducts].sort(handlerSortRecent) }
+            return { ...state, products: [...currentProducts].sort(handlerSortRecent) }
         default:
             throw new Error("Action wasn't valid.")
     }
