@@ -1,7 +1,6 @@
-import { GalleryProducts } from "components/GalleryProducts"
-import { ProductsToolbar } from "components/ProductsToolbar"
-import { useReducer, useState } from "react"
-import { initialStateToolbarReducer, toolbarReducer } from "reducers/toolbarReducer"
+import { GalleryProducts } from "components/GalleryProducts";
+import { ProductsToolbar } from "components/ProductsToolbar";
+import { useState } from "react";
 
 export const SectionProducts = () => {
     const [methodSort, setMethodSort] = useState<string>("");

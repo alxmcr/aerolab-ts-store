@@ -6,26 +6,14 @@ import './ProductsToolbar.css';
 export const ProductsToolbar = ({ setMethodSort }: ProductsToolbarProps) => {
     const handleNextPage = () => {
         console.log("Next page...");
-        // console.log({ setMethodSort })
     }
     const handlePreviousPage = () => {
         console.log("Previous page...");
     }
-    const handleMostRecentProducts = () => {
-        console.log("Most Recent products...");
-        setMethodSort("recent")
-        // dispatch({ type: "changeMethodSort", payload: { methodSort: "recent" } })
-    }
-    const handleLowestProducts = () => {
-        console.log("Lowest products...");
-        setMethodSort("lowest")
-        // dispatch({ type: "changeMethodSort", payload: { methodSort: "lowest" } })
-    }
-    const handleHighestProducts = () => {
-        console.log("Highest products...");
-        setMethodSort("highest")
-        // dispatch({ type: "changeMethodSort", payload: { methodSort: "highest" } })
-    }
+    const handleMostRecentProducts = () => setMethodSort("recent")
+    const handleLowestProducts = () => setMethodSort("lowest")
+    const handleHighestProducts = () => setMethodSort("highest")
+
     return (
         <div className="toolbar">
             <div className="toolbar__status">

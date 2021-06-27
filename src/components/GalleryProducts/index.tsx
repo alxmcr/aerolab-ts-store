@@ -4,8 +4,6 @@ import { useProducts } from "hooks/useProducts";
 import "./GalleryProducts.css";
 
 export const GalleryProducts = ({ methodSort }: GalleryProductsProps) => {
-    console.log({ methodSort })
-    // get rp
     const { products, loading, error } = useProducts();
 
     if (loading) return <p>Loading products...</p>
