@@ -18,6 +18,6 @@ export interface AppHeaderProps {
     loading: boolean
 }
 
-export interface UserContext {
+export interface UserContextProps {
     me: UserAPI | null
 }
