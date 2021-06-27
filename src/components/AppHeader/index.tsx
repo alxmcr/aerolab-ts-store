@@ -1,12 +1,10 @@
 import coin from 'assets/icons/coin.svg'
 import logo from 'assets/logo.svg'
-import { useMe } from 'hooks/useMe'
+import { AppHeaderProps } from 'componentsTypes'
 import "./AppHeader.css"
 
 
-export const AppHeader = () => {
-    const { me, error, loading } = useMe()
-
+export const AppHeader = ({ me, error, loading }: AppHeaderProps) => {
     if (loading) return <p>Loading user...</p>
     if (error !== null) return <p>There was an error while user was loading.</p>
 
