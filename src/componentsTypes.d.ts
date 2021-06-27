@@ -27,17 +27,3 @@ export interface PointsPillProps {
     children: React.ReactNode
     variant: string
 }
-
-export interface ProductsToolbarProps {
-    dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
-}
-
-export interface ProductsToolbarReducerState {
-    methodSort: "lowest" | "highest" | "recent"
-    products: ProductAPI[]
-}
-
-export interface SectionProductsProps {
-    dispatch: React.Dispatch<ACTION_TYPES_TOOLBAR_PRODUCTS>
-}
-

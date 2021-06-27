@@ -1,6 +1,6 @@
 import arrowLeft from "assets/icons/arrow-left.svg";
 import arrowRight from "assets/icons/arrow-right.svg";
-import { ProductsToolbarProps } from "componentsTypes";
+import { ProductsToolbarProps } from "reducers/toolbarReducer";
 import './ProductsToolbar.css';
 
 export const ProductsToolbar = ({ dispatch }: ProductsToolbarProps) => {
