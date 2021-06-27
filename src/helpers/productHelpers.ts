@@ -1,4 +1,3 @@
-import { ProductsToolbarState } from "componentsTypes";
 import { ProductAPI } from "types";
 
 export const handlerSortLowest = (productA: ProductAPI, productB: ProductAPI) => {

@@ -1,5 +1,7 @@
+import React, { Dispatch } from "react";
 import { ProductAPI, UserAPI } from "types";
 
+// Props
 export interface ProductProps {
     product: ProductAPI
 }
@@ -29,6 +31,16 @@ export interface ProductsToolbarProps {
     setMethodSort: (methodSort: string) => void
 }
 
-export interface ProductsToolbarState {
+// Reducers: Action types
+export type ACTION_TYPES =
+    | { type: "lowest" }
+    | { type: "highest" }
+    | { type: "recent" }
+
+export interface ToolbarReducerState {
     methodSort?: string | undefined
+}
+
+export interface ToolbarReducerProps {
+    dispatch: React.Dispatch<ACTION_TYPES>
 }

@@ -1,4 +1,3 @@
-import { UserContextProps } from 'componentsTypes';
 import { AuthContext } from 'context/AuthContext';
 import { useMe } from 'hooks/useMe';
 import { BrowserRouter } from 'react-router-dom';
