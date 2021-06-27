@@ -29,6 +29,12 @@
   border: none;
 }
 
+.toolbar__button--selected {
+  --bg-button: #31c2fc;
+  background-color: var(--bg-button);
+  color: #fff;
+}
+
 .toolbar__button--filter {
   background-color: #e2e0e0;
   color: #9c9c9c;
@@ -38,7 +44,6 @@
 }
 
 .toolbar__button--filter:hover {
-  --bg-button: #31c2fc;
   background-color: var(--bg-button);
   color: #fff;
 }

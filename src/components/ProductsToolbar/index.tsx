@@ -3,7 +3,7 @@ import arrowRight from "assets/icons/arrow-right.svg";
 import { ProductsToolbarProps } from "componentsTypes";
 import './ProductsToolbar.css';
 
-export const ProductsToolbar = ({ setMethodSort }: ProductsToolbarProps) => {
+export const ProductsToolbar = ({ methodSort, setMethodSort }: ProductsToolbarProps) => {
     const handleNextPage = () => {
         console.log("Next page...");
     }
@@ -24,15 +24,15 @@ export const ProductsToolbar = ({ setMethodSort }: ProductsToolbarProps) => {
                     <p className="toolbar__description">Sort by:</p>
                     <div className="toolbar__buttons">
                         <button
-                            className="toolbar__button toolbar__button--filter"
+                            className={`toolbar__button toolbar__button--filter`}
                             onClick={handleMostRecentProducts}
                         >Most recent</button>
                         <button
-                            className="toolbar__button toolbar__button--filter"
+                            className={`toolbar__button toolbar__button--filter`}
                             onClick={handleLowestProducts}
                         >Lowest price</button>
                         <button
-                            className="toolbar__button toolbar__button--filter"
+                            className={`toolbar__button toolbar__button--filter`}
                             onClick={handleHighestProducts}
                         >Highest price</button>
                     </div>
