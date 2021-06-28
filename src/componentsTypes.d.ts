@@ -13,12 +13,6 @@ export interface GalleryProductsProps {
 
 export type MethodSort = "lowest" | "highest" | "recent"
 
-export interface UseProductsHookProps {
-    methodSort: string
-    currentPage: number
-    limitByPage: number
-}
-
 export interface CategoryBannerProps {
     categoryTitle: string
 }
@@ -75,14 +69,16 @@ export type ACTION_TYPES_CART =
 export interface ProductsToolbarProps {
     methodSort: string
     setMethodSort: (methodSort: string) => void
-    currentPage: number
     setCurrentPage: (value: React.SetStateAction<number>) => void
     products: ProductAPI[]
+    currentPage: number
     limitByPage: number
 }
 
 export interface GridProductsProps {
     products: ProductAPI[]
+    currentPage: number
+    limitByPage: number
 }
 
 export interface ProductsHelperProps {
@@ -122,4 +118,15 @@ export interface PublicRouteAppProps {
 export interface CartReducerProps {
     cart: ProductAPI[]
     dispatch?: React.Dispatch<ACTION_TYPES_CART>
+}
+
+// Hooks
+export interface UseProductsHookProps {
+    methodSort: string
+}
+
+export interface UseProductsPaginatedHookProps {
+    products: ProductAPI[]
+    currentPage: number
+    limitByPage: number
 }

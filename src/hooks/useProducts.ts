@@ -5,9 +5,7 @@ import { getProducts } from "services/ProductService";
 import { ProductAPI } from "types";
 
 export const useProducts = ({
-    methodSort = '',
-    currentPage = 1,
-    limitByPage = 16
+    methodSort = ''
 }: UseProductsHookProps) => {
     const [products, setProducts] = useState<ProductAPI[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
@@ -32,11 +30,6 @@ export const useProducts = ({
                     default:
                         throw new Error("Sorting method is not valid.")
                 }
-                // Pagination
-                const start = 1;
-                const end = currentPage * limitByPage;
-                productsToShow.slice(currentPage)
-
                 setProducts(productsToShow)
             })
             .catch(error => setError(error))

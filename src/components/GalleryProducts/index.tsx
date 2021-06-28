@@ -9,11 +9,7 @@ export const GalleryProducts = () => {
     const limitByPage = 16;
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [methodSort, setMethodSort] = useState<string>("recent");
-    const { products, loading, error } = useProducts({
-        methodSort,
-        currentPage,
-        limitByPage
-    })
+    const { products, loading, error } = useProducts({ methodSort })
 
     if (loading) return <p>Loading products...</p>
     if (error !== null) return <p>There was an error while we're loading the products.</p>
@@ -28,7 +24,11 @@ export const GalleryProducts = () => {
                 products={products}
                 limitByPage={limitByPage}
             />
-            <GridProducts products={products} />
+            <GridProducts
+                products={products}
+                currentPage={currentPage}
+                limitByPage={limitByPage}
+            />
         </div>
     )
 }
