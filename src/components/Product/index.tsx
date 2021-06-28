@@ -22,6 +22,11 @@ export const Product = ({ product }: ProductProps) => {
     const handlerRedeemProduct = () => {
         const { cost } = product
         console.log(`Redeem -${cost}`);
+        const { dispatch } = userValue;
+
+        if (dispatch !== undefined) {
+            dispatch({ type: "decrementPoints", payload: { points: cost } })
+        }
     }
     return (
         <figure
