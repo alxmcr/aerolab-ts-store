@@ -8,7 +8,7 @@ import "./GalleryProducts.css";
 export const GalleryProducts = () => {
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [methodSort, setMethodSort] = useState<string>("recent");
-    const { products, loading, error } = useProducts({ methodSort })
+    const { products, loading, error } = useProducts({ methodSort, currentPage })
 
     if (loading) return <p>Loading products...</p>
     if (error !== null) return <p>There was an error while we're loading the products.</p>

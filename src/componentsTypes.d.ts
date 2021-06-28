@@ -15,6 +15,7 @@ export type MethodSort = "lowest" | "highest" | "recent"
 
 export interface UseProductsHookProps {
     methodSort: string
+    currentPage: number
 }
 
 export interface CategoryBannerProps {
