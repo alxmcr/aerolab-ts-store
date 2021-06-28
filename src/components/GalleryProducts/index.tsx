@@ -18,6 +18,7 @@ export const GalleryProducts = () => {
                 methodSort={methodSort}
                 setMethodSort={setMethodSort}
                 products={products}
+                limitByPage={16}
             />
             <GridProducts products={products} />
         </div>

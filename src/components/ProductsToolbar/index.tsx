@@ -3,7 +3,12 @@ import arrowRight from "assets/icons/arrow-right.svg";
 import { ProductsToolbarProps } from "componentsTypes";
 import './ProductsToolbar.css';
 
-export const ProductsToolbar = ({ products = [], methodSort, setMethodSort }: ProductsToolbarProps) => {
+export const ProductsToolbar = ({
+    products = [],
+    limitByPage = 16,
+    methodSort,
+    setMethodSort
+}: ProductsToolbarProps) => {
     const handleNextPage = () => {
         console.log("Next page...");
     }
@@ -17,7 +22,9 @@ export const ProductsToolbar = ({ products = [], methodSort, setMethodSort }: Pr
     return (
         <div className="toolbar">
             <div className="toolbar__status">
-                <p className="toolbar__quantity">16 of {products.length} products</p>
+                <p className="toolbar__quantity">
+                    {limitByPage} of {products.length} products
+                </p>
             </div>
             <div className="toolbar__actions">
                 <div className="toolbar__sort">

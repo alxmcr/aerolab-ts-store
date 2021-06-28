@@ -74,6 +74,7 @@ export interface ProductsToolbarProps {
     methodSort: string
     setMethodSort: (methodSort: string) => void
     products: ProductAPI[]
+    limitByPage: number
 }
 
 export interface GridProductsProps {
