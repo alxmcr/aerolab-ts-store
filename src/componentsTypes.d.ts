@@ -56,7 +56,7 @@ export interface CartReducerState {
 }
 
 export interface GridProductsProps {
-    methodSort: string
+    products: ProductAPI[]
 }
 
 //  Reducer: Actions Types
