@@ -68,7 +68,7 @@ export type ACTION_TYPES_USER =
 
 export type ACTION_TYPES_CART =
     | { type: "addProduct", payload: ProductPayload }
-    | { type: "remove", payload: ProductPayload }
+    | { type: "removeProduct", payload: ProductPayload }
 
 export interface ProductsToolbarProps {
     methodSort: string
