@@ -1,4 +1,4 @@
-import { UserAuthState, UserReducerState } from 'componentsTypes';
+import { UserAuthState } from 'componentsTypes';
 import { AuthContext } from 'context/AuthContext';
 import { invalidUser, isUserAuthenticated, mapperToUserAuthStateAPI } from 'helpers/userHelpers';
 import { useAuth } from 'hooks/useAuth';
@@ -18,7 +18,6 @@ function App() {
     }
   }, [me, loading])
 
-  const initialStateUserState: UserReducerState = { me: { ...authValue } }
   return (
     <BrowserRouter>
       <AuthContext.Provider value={{ me: authValue }}>
