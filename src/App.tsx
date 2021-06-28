@@ -12,9 +12,10 @@ function App() {
   const { me } = useAuth();
   const initialUserState: UserReducerState = { me }
   const [userState, userDispatch] = useReducer(userReducer, initialUserState);
+  const authValue = { me }
   return (
     <BrowserRouter>
-      <AuthContext.Provider value={{ me }}>
+      <AuthContext.Provider value={authValue}>
         <div className={styles.App}>
           <SwitchRoutesApp isAuthenticated={isUserAuthenticated(me)} />
         </div>
