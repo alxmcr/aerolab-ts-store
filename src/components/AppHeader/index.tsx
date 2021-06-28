@@ -1,13 +1,14 @@
 import coin from 'assets/icons/coin.svg'
 import logo from 'assets/logo.svg'
-import { useMe } from 'hooks/useMe'
+import { AuthContext } from 'context/AuthContext'
+import { useContext } from 'react'
 import "./AppHeader.css"
 
 export const AppHeader = () => {
-    const user = useMe()
+    const value = useContext(AuthContext)
 
-    if (user === null) return <p>Credentials are not valid</p>
-    if (user.me === null) return <p>User is not valid</p>
+    if (value === null) return <p>Credentials are not valid</p>
+    if (value.me === null) return <p>User is not valid</p>
 
     return (
         <header className="header">
@@ -24,9 +25,9 @@ export const AppHeader = () => {
                     </li>
                     <li className="header__item">
                         <a href="/john" className="header__link">
-                            <span className="header__name">{user.me.name}</span>
+                            <span className="header__name">{value.me.name}</span>
                             <div className="header__points">
-                                <p className="header__value">{user.me.points}</p>
+                                <p className="header__value">{value.me.points}</p>
                                 <img
                                     src={coin}
                                     alt="Coin"

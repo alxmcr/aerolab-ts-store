@@ -3,14 +3,15 @@ import buyWhite from 'assets/icons/buy-white.svg';
 import coin from 'assets/icons/coin.svg';
 import { PointsPill } from 'components/PointsPill';
 import { ProductProps } from 'componentsTypes';
-import { useMe } from 'hooks/useMe';
+import { AuthContext } from 'context/AuthContext';
+import { useContext } from 'react';
 import './Product.css';
 
 export const Product = ({ product }: ProductProps) => {
-    const user = useMe();
+    const value = useContext(AuthContext)
 
-    if (user === null) return <p>Credentials are not valid</p>
-    if (user.me === null) return <p>User is not valid</p>
+    if (value === null) return <p>Credentials are not valid</p>
+    if (value.me === null) return <p>User is not valid</p>
 
     const { _id, name, category, cost, img } = product;
     const altText = `Product: ${name}`;
@@ -23,10 +24,10 @@ export const Product = ({ product }: ProductProps) => {
     }
     return (
         <figure
-            className={`product ${user.me?.points >= cost && 'product--posible'}`}
+            className={`product ${value.me?.points >= cost && 'product--posible'}`}
             id={_id}
         >
-            {user.me?.points >= cost
+            {value.me?.points >= cost
                 ? (
                     <button
                         className="product__buy product__buy--blue"
@@ -37,7 +38,7 @@ export const Product = ({ product }: ProductProps) => {
                 : (
                     <PointsPill variant="pill--need">
                         <>
-                            You need ({cost - user.me?.points} )
+                            You need ({cost - value.me?.points} )
                         </>
                     </PointsPill>
                 )
@@ -47,7 +48,7 @@ export const Product = ({ product }: ProductProps) => {
                 <p className="product__category">{category}</p>
                 <p className="product__name">{name}</p>
             </figcaption>
-            {user.me?.points >= cost && (
+            {value.me?.points >= cost && (
                 <div className="product__overlay" id="overlay-product">
 
                     <button
