@@ -1,5 +1,6 @@
 import coin from 'assets/icons/coin.svg'
 import logo from 'assets/logo.svg'
+import { CartReducerContext } from 'context/CartReducerContext'
 import { UserReducerContext } from 'context/UserReducerContext'
 import { useContext } from 'react'
 import "./AppHeader.css"
@@ -7,6 +8,9 @@ import "./AppHeader.css"
 export const AppHeader = () => {
     // User
     const userValue = useContext(UserReducerContext)
+    // Cart
+    let cartValue = useContext(CartReducerContext);
+
     if (userValue === null) return <p>Credentials are not valid</p>
     if (userValue.me === null) return <p>User is not valid</p>
 
@@ -21,6 +25,7 @@ export const AppHeader = () => {
                                 alt="Aerolab logo"
                                 className="header__icon header__icon--logo"
                             />
+                            <p>Cart({cartValue?.cart.length})</p>
                         </a>
                     </li>
                     <li className="header__item">
