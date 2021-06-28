@@ -1,12 +1,12 @@
 import { GridProducts } from "components/GridProducts";
 import { ProductsToolbar } from "components/ProductsToolbar";
+import { GalleryProductsProps } from "componentsTypes";
 import { useProducts } from "hooks/useProducts";
 import { useState } from "react";
 import "./GalleryProducts.css";
 
 
-export const GalleryProducts = () => {
-    const limitByPage = 16;
+export const GalleryProducts = ({ limitByPage = 16 }: GalleryProductsProps) => {
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [methodSort, setMethodSort] = useState<string>("recent");
     const { products, loading, error } = useProducts({ methodSort })

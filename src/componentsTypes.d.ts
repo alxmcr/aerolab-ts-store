@@ -8,7 +8,7 @@ export interface ProductProps {
 }
 
 export interface GalleryProductsProps {
-    methodSort: string
+    limitByPage: number
 }
 
 export type MethodSort = "lowest" | "highest" | "recent"

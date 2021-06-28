@@ -3,7 +3,7 @@ import { GalleryProducts } from "components/GalleryProducts";
 export const SectionProducts = () => {
     return (
         <section className="products">
-            <GalleryProducts />
+            <GalleryProducts limitByPage={16} />
         </section>
     )
 }
