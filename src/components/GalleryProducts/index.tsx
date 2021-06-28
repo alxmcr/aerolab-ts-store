@@ -1,7 +1,8 @@
-import { Product } from "components/Product";
+import { GridProducts } from "components/GridProducts";
 import { GalleryProductsProps } from "componentsTypes";
 import { useProducts } from "hooks/useProducts";
 import "./GalleryProducts.css";
+
 
 export const GalleryProducts = ({ methodSort = 'recent' }: GalleryProductsProps) => {
     const { products, loading, error } = useProducts({ methodSort });
@@ -11,11 +12,7 @@ export const GalleryProducts = ({ methodSort = 'recent' }: GalleryProductsProps)
 
     return (
         <div className="gallery">
-            {
-                products.map(product => (
-                    <Product key={product._id} product={product} />
-                ))
-            }
+            <GridProducts products={products} />
         </div>
     )
 }
