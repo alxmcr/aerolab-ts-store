@@ -73,6 +73,8 @@ export type ACTION_TYPES_CART =
 export interface ProductsToolbarProps {
     methodSort: string
     setMethodSort: (methodSort: string) => void
+    currentPage: number
+    setCurrentPage: (value: React.SetStateAction<number>) => void
     products: ProductAPI[]
     limitByPage: number
 }

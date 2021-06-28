@@ -6,6 +6,7 @@ import "./GalleryProducts.css";
 
 
 export const GalleryProducts = () => {
+    const [currentPage, setCurrentPage] = useState<number>(1);
     const [methodSort, setMethodSort] = useState<string>("recent");
     const { products, loading, error } = useProducts({ methodSort })
 
@@ -17,6 +18,8 @@ export const GalleryProducts = () => {
             <ProductsToolbar
                 methodSort={methodSort}
                 setMethodSort={setMethodSort}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
                 products={products}
                 limitByPage={16}
             />

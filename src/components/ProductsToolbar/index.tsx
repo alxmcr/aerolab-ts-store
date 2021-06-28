@@ -8,9 +8,11 @@ export const ProductsToolbar = ({
     products = [],
     limitByPage = 16,
     methodSort,
-    setMethodSort
+    setMethodSort,
+    currentPage,
+    setCurrentPage
 }: ProductsToolbarProps) => {
-    const [currentPage, setCurrentPage] = useState<number>(1);
+
     const handleNextPage = () => {
         console.log("Next page...");
         setCurrentPage((prev) => {
