@@ -17,18 +17,18 @@ export const useProducts = ({ methodSort = '', currentPage = 1 }: UseProductsHoo
                 let productsToShow = [...data];
                 switch (methodSort as MethodSort) {
                     case "recent":
-                        setProducts(productsToShow.sort(handlerSortRecent))
+                        productsToShow.sort(handlerSortRecent)
                         break;
                     case "lowest":
-                        setProducts(productsToShow.sort(handlerSortLowest))
+                        productsToShow.sort(handlerSortLowest)
                         break;
                     case "highest":
-                        setProducts(productsToShow.sort(handlerSortHighest))
+                        productsToShow.sort(handlerSortHighest)
                         break;
                     default:
-                        setProducts(data)
-                        break;
+                        throw new Error("Sorting method is not valid.")
                 }
+                setProducts(productsToShow)
             })
             .catch(error => setError(error))
             .finally(() => {
