@@ -1,26 +1,33 @@
-import { UserReducerState } from 'componentsTypes';
+import { UserAuthState } from 'componentsTypes';
 import { AuthContext } from 'context/AuthContext';
-import { isUserAuthenticated } from 'helpers/userHelpers';
+import { invalidUser, isUserAuthenticated, mapperToUserAuthStateAPI } from 'helpers/userHelpers';
 import { useAuth } from 'hooks/useAuth';
-import { useReducer } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { userReducer } from 'reducers/userReducer';
 import { SwitchRoutesApp } from 'routing/SwitchRoutesApp';
 import styles from './App.module.css';
 
 function App() {
-  const { me } = useAuth();
-  const initialUserState: UserReducerState = { me }
-  const [userState, userDispatch] = useReducer(userReducer, initialUserState);
-  const authValue = { me: userState.me }
+  const { me, loading } = useAuth();
+  const [authValue, setAuthValue] = useState<UserAuthState>(invalidUser);
+
+  useEffect(() => {
+    if (!loading) {
+      const authValueState = mapperToUserAuthStateAPI(me);
+      setAuthValue(authValueState)
+    }
+  }, [me, loading])
+
+  // const [userState, userDispatch] = useReducer(userReducer, { me: { ...authValue } });
   return (
     <BrowserRouter>
-      <AuthContext.Provider value={authValue}>
+      <AuthContext.Provider value={{ me: authValue }}>
         <div className={styles.App}>
-          <SwitchRoutesApp isAuthenticated={isUserAuthenticated(me)} />
+          <SwitchRoutesApp isAuthenticated={isUserAuthenticated(authValue)} />
         </div>
       </AuthContext.Provider>
-    </BrowserRouter>
+    </BrowserRouter >
   );
 }
 
