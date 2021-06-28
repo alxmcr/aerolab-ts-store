@@ -81,8 +81,7 @@ export interface UserAuthState {
 }
 
 export interface UserContextProps {
-    me: UserAuthState,
-    dispatch?: React.Dispatch<ACTION_TYPES_USER>
+    me: UserAuthState
 }
 
 export interface SwitchRoutesAppProps {
