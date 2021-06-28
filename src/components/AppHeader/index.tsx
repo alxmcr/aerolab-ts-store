@@ -5,10 +5,10 @@ import { useContext } from 'react'
 import "./AppHeader.css"
 
 export const AppHeader = () => {
-    const value = useContext(UserReducerContext)
-
-    if (value === null) return <p>Credentials are not valid</p>
-    if (value.me === null) return <p>User is not valid</p>
+    // User
+    const userValue = useContext(UserReducerContext)
+    if (userValue === null) return <p>Credentials are not valid</p>
+    if (userValue.me === null) return <p>User is not valid</p>
 
     return (
         <header className="header">
@@ -25,9 +25,9 @@ export const AppHeader = () => {
                     </li>
                     <li className="header__item">
                         <a href="/john" className="header__link">
-                            <span className="header__name">{value.me.name}</span>
+                            <span className="header__name">{userValue.me.name}</span>
                             <div className="header__points">
-                                <p className="header__value">{value.me.points}</p>
+                                <p className="header__value">{userValue.me.points}</p>
                                 <img
                                     src={coin}
                                     alt="Coin"
