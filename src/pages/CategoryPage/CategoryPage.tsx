@@ -28,9 +28,9 @@ export const CategoryPage = () => {
 
     return (
         <UserReducerContext.Provider value={valueUserReducerContext}>
-            <AppHeader />
-            <CategoryBanner categoryTitle="Electronics" />
             <CartReducerContext.Provider value={cartValue}>
+                <AppHeader />
+                <CategoryBanner categoryTitle="Electronics" />
                 <section className="category__container">
                     <SectionProducts />
                 </section>
