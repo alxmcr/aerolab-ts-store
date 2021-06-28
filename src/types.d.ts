@@ -9,7 +9,7 @@ export interface RedeemAPI {
 }
 
 export interface UserAPI {
-    id: string
+    id: string | null
     name: string
     points: number
     redeemHistory: RedeemAPI[]

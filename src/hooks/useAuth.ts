@@ -1,9 +1,10 @@
+import { invalidUser } from "helpers/userHelpers";
 import { useEffect, useState } from "react";
 import { getMe } from "services/UserService";
 import { UserAPI } from "types";
 
 export const useAuth = () => {
-    const [me, setMe] = useState<UserAPI | null>(null);
+    const [me, setMe] = useState<UserAPI>(invalidUser);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<Error | null>(null);
 
