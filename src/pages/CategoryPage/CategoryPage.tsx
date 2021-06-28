@@ -9,10 +9,15 @@ import { userReducer } from 'reducers/userReducer';
 import './CategoryPage.css';
 
 export const CategoryPage = () => {
+    // User
     const userValue = useContext(AuthContext);
     const initialUserState: UserReducerState = { me: userValue.me }
-    const [state, dispatch] = useReducer(userReducer, initialUserState)
-    const valueUserReducerContext: UserReducerContextProps = { me: state.me, dispatch }
+    const [userState, userDispatch] = useReducer(userReducer, initialUserState)
+    const valueUserReducerContext: UserReducerContextProps = {
+        me: userState.me,
+        dispatch: userDispatch
+    }
+
     return (
         <UserReducerContext.Provider value={valueUserReducerContext}>
             <AppHeader />
