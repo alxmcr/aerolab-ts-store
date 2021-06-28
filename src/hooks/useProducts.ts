@@ -4,7 +4,10 @@ import { useEffect, useState } from "react";
 import { getProducts } from "services/ProductService";
 import { ProductAPI } from "types";
 
-export const useProducts = ({ methodSort = '', currentPage = 1 }: UseProductsHookProps) => {
+export const useProducts = ({
+    methodSort = '',
+    currentPage = 1
+}: UseProductsHookProps) => {
     const [products, setProducts] = useState<ProductAPI[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<Error | null>(null);
