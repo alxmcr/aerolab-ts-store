@@ -6,7 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className={styles.App}>
-        <SwitchRoutesApp isAuthenticated={false} />
+        <SwitchRoutesApp isAuthenticated={true} />
       </div>
     </BrowserRouter>
   );

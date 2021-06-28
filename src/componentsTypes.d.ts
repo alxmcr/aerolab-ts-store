@@ -72,8 +72,16 @@ export interface SectionProductsProps {
 }
 
 // Context
+export interface UserAuthState {
+    id: string | null
+    name: string
+    points: number
+    redeemHistory: RedeemAPI[]
+    createDate: Date
+}
+
 export interface UserContextProps {
-    me: UserAPI
+    me: UserAuthState
 }
 
 export interface SwitchRoutesAppProps {
