@@ -55,10 +55,6 @@ export interface CartReducerState {
     cart: ProductAPI[]
 }
 
-export interface GridProductsProps {
-    products: ProductAPI[]
-}
-
 //  Reducer: Actions Types
 export type ACTION_TYPES_TOOLBAR_PRODUCTS =
     | { type: "lowest" }
@@ -77,6 +73,11 @@ export type ACTION_TYPES_CART =
 export interface ProductsToolbarProps {
     methodSort: string
     setMethodSort: (methodSort: string) => void
+    products: ProductAPI[]
+}
+
+export interface GridProductsProps {
+    products: ProductAPI[]
 }
 
 export interface ProductsHelperProps {
