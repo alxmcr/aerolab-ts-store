@@ -1,7 +1,14 @@
 import { ACTION_TYPES_USER, UserReducerState } from "componentsTypes";
+import { invalidUser } from "helpers/userHelpers";
 
+export const initialUserState: UserReducerState = {
+    me: invalidUser
+}
 // reducer
-export const userReducer = (state: UserReducerState, action: ACTION_TYPES_USER) => {
+export const userReducer = (
+    state: UserReducerState,
+    action: ACTION_TYPES_USER
+) => {
     const currentUser = state.me;
 
     if (currentUser === null) return state;
