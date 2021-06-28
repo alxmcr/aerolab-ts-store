@@ -1,6 +1,7 @@
 import arrowLeft from "assets/icons/arrow-left.svg";
 import arrowRight from "assets/icons/arrow-right.svg";
 import { ProductsToolbarProps } from "componentsTypes";
+import { useState } from "react";
 import './ProductsToolbar.css';
 
 export const ProductsToolbar = ({
@@ -9,11 +10,18 @@ export const ProductsToolbar = ({
     methodSort,
     setMethodSort
 }: ProductsToolbarProps) => {
+    const [currentPage, setCurrentPage] = useState<number>(1);
     const handleNextPage = () => {
         console.log("Next page...");
+        setCurrentPage((prev) => {
+            return prev + 1
+        })
     }
     const handlePreviousPage = () => {
         console.log("Previous page...");
+        setCurrentPage((prev) => {
+            return prev - 1
+        })
     }
     const handleMostRecentProducts = () => setMethodSort("recent")
     const handleLowestProducts = () => setMethodSort("lowest")
@@ -23,7 +31,7 @@ export const ProductsToolbar = ({
         <div className="toolbar">
             <div className="toolbar__status">
                 <p className="toolbar__quantity">
-                    {limitByPage} of {products.length} products
+                    {currentPage * limitByPage} of {products.length} products
                 </p>
             </div>
             <div className="toolbar__actions">
@@ -45,14 +53,14 @@ export const ProductsToolbar = ({
                     </div>
                 </div>
                 <div className="toolbar__arrows">
-                    <button className="toolbar__button" onClick={handleNextPage}>
+                    <button className="toolbar__button" onClick={handlePreviousPage}>
                         <img
                             src={arrowLeft}
                             alt="Previous page"
                             className="toolbar__icon"
                         />
                     </button>
-                    <button className="toolbar__button" onClick={handlePreviousPage}>
+                    <button className="toolbar__button" onClick={handleNextPage}>
                         <img
                             src={arrowRight}
                             alt="Next page"
