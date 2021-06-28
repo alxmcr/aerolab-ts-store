@@ -1,11 +1,11 @@
 import coin from 'assets/icons/coin.svg'
 import logo from 'assets/logo.svg'
-import { AuthContext } from 'context/AuthContext'
+import { UserReducerContext } from 'context/UserReducerContext'
 import { useContext } from 'react'
 import "./AppHeader.css"
 
 export const AppHeader = () => {
-    const value = useContext(AuthContext)
+    const value = useContext(UserReducerContext)
 
     if (value === null) return <p>Credentials are not valid</p>
     if (value.me === null) return <p>User is not valid</p>

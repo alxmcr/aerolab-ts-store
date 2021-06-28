@@ -84,6 +84,11 @@ export interface UserContextProps {
     me: UserAuthState
 }
 
+export interface UserReducerContextProps {
+    me: UserAuthState
+    dispatch?: React.Dispatch<ACTION_TYPES_USER>
+}
+
 export interface SwitchRoutesAppProps {
     isAuthenticated: boolean
 }

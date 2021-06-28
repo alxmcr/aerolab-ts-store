@@ -3,15 +3,15 @@ import buyWhite from 'assets/icons/buy-white.svg';
 import coin from 'assets/icons/coin.svg';
 import { PointsPill } from 'components/PointsPill';
 import { ProductProps } from 'componentsTypes';
-import { AuthContext } from 'context/AuthContext';
+import { UserReducerContext } from 'context/UserReducerContext';
 import { useContext } from 'react';
 import './Product.css';
 
 export const Product = ({ product }: ProductProps) => {
-    const value = useContext(AuthContext)
+    const userValue = useContext(UserReducerContext);
 
-    if (value === null) return <p>Credentials are not valid</p>
-    if (value.me === null) return <p>User is not valid</p>
+    if (userValue === null) return <p>Credentials are not valid</p>
+    if (userValue.me === null) return <p>User is not valid</p>
 
     const { _id, name, category, cost, img } = product;
     const altText = `Product: ${name}`;
@@ -20,14 +20,15 @@ export const Product = ({ product }: ProductProps) => {
         console.log("Add...", { product });
     }
     const handlerRedeemProduct = () => {
-        console.log("Redeem...", { product });
+        const { cost } = product
+        console.log(`Redeem -${cost}`);
     }
     return (
         <figure
-            className={`product ${value.me?.points >= cost && 'product--posible'}`}
+            className={`product ${userValue.me?.points >= cost && 'product--posible'}`}
             id={_id}
         >
-            {value.me?.points >= cost
+            {userValue.me?.points >= cost
                 ? (
                     <button
                         className="product__buy product__buy--blue"
@@ -38,7 +39,7 @@ export const Product = ({ product }: ProductProps) => {
                 : (
                     <PointsPill variant="pill--need">
                         <>
-                            You need ({cost - value.me?.points} )
+                            You need ({cost - userValue.me?.points} )
                         </>
                     </PointsPill>
                 )
@@ -48,7 +49,7 @@ export const Product = ({ product }: ProductProps) => {
                 <p className="product__category">{category}</p>
                 <p className="product__name">{name}</p>
             </figcaption>
-            {value.me?.points >= cost && (
+            {userValue.me?.points >= cost && (
                 <div className="product__overlay" id="overlay-product">
 
                     <button
