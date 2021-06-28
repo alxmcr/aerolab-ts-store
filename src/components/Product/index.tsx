@@ -19,18 +19,13 @@ export const Product = ({ product }: ProductProps) => {
     const altText = `Product: ${name}`;
 
     const handlerAddCart = () => {
-        // console.log("Add...", { product });
         const { dispatch } = cartValue;
-
-        console.log("BEFORE", { cartValue })
         if (dispatch !== undefined) {
             dispatch({ type: "addProduct", payload: { product } })
         }
-        console.log("AFTER", { cartValue })
     }
     const handlerRedeemProduct = () => {
         const { cost } = product
-        // console.log(`Redeem -${cost}`);
         const { dispatch } = userValue;
 
         if (dispatch !== undefined) {
