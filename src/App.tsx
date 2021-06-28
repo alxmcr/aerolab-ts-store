@@ -12,7 +12,7 @@ function App() {
   const { me } = useAuth();
   const initialUserState: UserReducerState = { me }
   const [userState, userDispatch] = useReducer(userReducer, initialUserState);
-  const authValue = { me }
+  const authValue = { me: userState.me }
   return (
     <BrowserRouter>
       <AuthContext.Provider value={authValue}>
