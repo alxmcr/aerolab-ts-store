@@ -22,7 +22,9 @@ function App() {
     <BrowserRouter>
       <AuthContext.Provider value={{ me: authValue }}>
         <div className={styles.App}>
-          <SwitchRoutesApp isAuthenticated={isUserAuthenticated(authValue)} />
+          <SwitchRoutesApp
+            isAuthenticated={isUserAuthenticated(authValue)}
+          />
         </div>
       </AuthContext.Provider>
     </BrowserRouter >
