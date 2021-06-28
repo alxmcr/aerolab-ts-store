@@ -32,8 +32,13 @@ export interface PointsPillProps {
     variant: string
 }
 
+// Payloads
 export interface PointsPayload {
     points: number
+}
+
+export interface ProductPayload {
+    product: ProductAPI
 }
 
 // Reducer: state
@@ -46,6 +51,10 @@ export interface UserReducerState {
     me: UserAPI
 }
 
+export interface CartReducerState {
+    cart: ProductAPI[]
+}
+
 //  Reducer: Actions Types
 export type ACTION_TYPES_TOOLBAR_PRODUCTS =
     | { type: "lowest" }
@@ -53,10 +62,13 @@ export type ACTION_TYPES_TOOLBAR_PRODUCTS =
     | { type: "recent" }
     | { type: "changeMethodSort", payload: ProductsToolbarReducerState }
 
-// actions types
 export type ACTION_TYPES_USER =
     | { type: "incrementPoints", payload: PointsPayload }
     | { type: "decrementPoints", payload: PointsPayload }
+
+export type ACTION_TYPES_CART =
+    | { type: "addProduct", payload: ProductPayload }
+    | { type: "remove", payload: ProductPayload }
 
 export interface ProductsToolbarProps {
     methodSort: string
@@ -95,4 +107,9 @@ export interface SwitchRoutesAppProps {
 
 export interface PublicRouteAppProps {
     isAuthenticated: boolean
+}
+
+export interface CartReducerProps {
+    cart: ProductAPI[]
+    dispatch?: React.Dispatch<ACTION_TYPES_CART>
 }
