@@ -1,12 +1,17 @@
+import { SwitchRoutesAppProps } from "componentsTypes"
 import { CategoryPage } from "pages/CategoryPage/CategoryPage"
 import { HomePage } from "pages/HomePage/HomePage"
-import { Route, Switch } from "react-router-dom"
+import { Redirect, Route, Switch } from "react-router-dom"
 
-export const SwitchRoutesApp = () => {
+export const SwitchRoutesApp = ({ isAuthenticated }: SwitchRoutesAppProps) => {
     return (
         <Switch>
             <Route path="/" component={HomePage} exact />
-            <Route path="/category" component={CategoryPage} />
+            {
+                isAuthenticated
+                    ? <Route path="/category" component={CategoryPage} />
+                    : <Redirect to="/" />
+            }
         </Switch>
     )
 }
