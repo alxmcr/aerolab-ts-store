@@ -14,13 +14,13 @@ export const ProductsToolbar = ({
     const handleNextPage = () => {
         console.log("Next page...");
         setCurrentPage((prev) => {
-            return prev + 1
+            return (prev + 1) * limitByPage > products.length ? prev : prev + 1
         })
     }
     const handlePreviousPage = () => {
         console.log("Previous page...");
         setCurrentPage((prev) => {
-            return prev - 1
+            return (prev - 1) * limitByPage < limitByPage ? prev : prev - 1
         })
     }
     const handleMostRecentProducts = () => setMethodSort("recent")
