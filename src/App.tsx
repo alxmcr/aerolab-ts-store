@@ -1,10 +1,8 @@
-// import { UserAuthState } from 'componentsTypes';
 import { UserAuthState } from 'componentsTypes';
 import { AuthContext } from 'context/AuthContext';
-import { invalidUser, isUserAuthenticated, mapperToUserAuthStateAPI } from 'helpers/userHelpers';
+import { invalidUser, mapperToUserAuthStateAPI } from 'helpers/userHelpers';
 import { useAuth } from 'hooks/useAuth';
-import { useCallback, useEffect, useState } from 'react';
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { SwitchRoutesApp } from 'routing/SwitchRoutesApp';
 import styles from './App.module.css';
