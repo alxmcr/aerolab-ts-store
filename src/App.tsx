@@ -19,7 +19,6 @@ function App() {
   }, [me, loading])
 
   const initialStateUserState: UserReducerState = { me: { ...authValue } }
-  console.log({ initialStateUserState });
   return (
     <BrowserRouter>
       <AuthContext.Provider value={{ me: authValue }}>
