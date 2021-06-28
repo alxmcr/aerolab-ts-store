@@ -22,15 +22,21 @@ function App() {
 
   return (
     <AuthContext.Provider value={{ me: authValue }}>
-      <div className={styles.App}>
-        {authValue.id === null
-          ? <p className={styles.AppLoadingMsg}>Loading</p>
-          :
-          <BrowserRouter>
-            <SwitchRoutesApp />
-          </BrowserRouter >
-        }
-      </div>
+      {authValue.id === null
+        ? (
+          <div className={styles.AppLoading}>
+            <p className={styles.AppLoadingMsg}>Loading...</p>
+          </div>
+        )
+        : (
+          <div className={styles.App}>
+            <BrowserRouter>
+              <SwitchRoutesApp />
+            </BrowserRouter >
+          </div>
+        )
+
+      }
     </AuthContext.Provider>
   );
 }
