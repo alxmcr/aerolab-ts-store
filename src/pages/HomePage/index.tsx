@@ -8,9 +8,9 @@ import { UserReducerContext } from 'context/UserReducerContext';
 import { useContext, useReducer } from 'react';
 import { cartReducer, initialCartState } from 'reducers/cartReducer';
 import { userReducer } from 'reducers/userReducer';
-import './CategoryPage.css';
+import './HomePage.css';
 
-export const CategoryPage = () => {
+export const HomePage = () => {
     // User
     const userValue = useContext(AuthContext);
     const initialUserState: UserReducerState = { me: userValue.me }

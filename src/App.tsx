@@ -3,7 +3,7 @@ import { UserAuthState } from 'componentsTypes';
 import { AuthContext } from 'context/AuthContext';
 import { invalidUser, isUserAuthenticated, mapperToUserAuthStateAPI } from 'helpers/userHelpers';
 import { useAuth } from 'hooks/useAuth';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 // import { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { SwitchRoutesApp } from 'routing/SwitchRoutesApp';
@@ -22,17 +22,15 @@ function App() {
 
   return (
     <AuthContext.Provider value={{ me: authValue }}>
-      {authValue.id === null
-        ? <p>Loading</p>
-        :
-        <div className={styles.App}>
+      <div className={styles.App}>
+        {authValue.id === null
+          ? <p className={styles.AppLoadingMsg}>Loading</p>
+          :
           <BrowserRouter>
-            <SwitchRoutesApp
-              isAuthenticated={isUserAuthenticated(authValue)}
-            />
+            <SwitchRoutesApp />
           </BrowserRouter >
-        </div>
-      }
+        }
+      </div>
     </AuthContext.Provider>
   );
 }
