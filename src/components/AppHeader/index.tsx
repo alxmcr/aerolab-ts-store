@@ -25,7 +25,9 @@ export const AppHeader = () => {
                                 alt="Aerolab logo"
                                 className="header__icon header__icon--logo"
                             />
-                            <p>Cart({cartValue?.cart.length})</p>
+                            {cartValue?.cart.length > 0 && (
+                                <p>Cart({cartValue?.cart.length})</p>
+                            )}
                         </a>
                     </li>
                     <li className="header__item">
