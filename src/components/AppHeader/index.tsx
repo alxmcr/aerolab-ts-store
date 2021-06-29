@@ -28,12 +28,12 @@ export const AppHeader = () => {
                     </a>
                 </div>
                 <div className="header__group">
-                    <a href="#" className="header__link">
+                    <a href="/" className="header__link">
                         <span className="header__name">{userValue.me.name}</span>
                         <PointsPill>{userValue.me.points}</PointsPill>
                     </a>
                     {cartValue?.cart.length > 0 && (
-                        <a href="#" className="header__link">
+                        <a href="/" className="header__link">
                             <img
                                 src={cart}
                                 alt="Cart logo"
