@@ -11,11 +11,19 @@ export const ProductsToolbar = ({
     currentPage,
     setCurrentPage
 }: ProductsToolbarProps) => {
-
+    const totalNumberProducts = products.length;
     const handleNextPage = () => {
         console.log("Next page...");
         setCurrentPage((prev) => {
-            return (prev + 1) * limitByPage > products.length ? prev : prev + 1
+            const nextPage = prev + 1;
+            if (nextPage * limitByPage <= totalNumberProducts) {
+                return nextPage
+            }
+
+            if (nextPage * limitByPage - totalNumberProducts < limitByPage) {
+                return nextPage
+            }
+            return prev;
         })
     }
     const handlePreviousPage = () => {
