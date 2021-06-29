@@ -1,4 +1,4 @@
-import coin from 'assets/icons/coin.svg'
+import cart from 'assets/icons/cart.svg'
 import logo from 'assets/logo.svg'
 import { PointsPill } from 'components/PointsPill'
 import { CartReducerContext } from 'context/CartReducerContext'
@@ -32,11 +32,16 @@ export const AppHeader = () => {
                         <span className="header__name">{userValue.me.name}</span>
                         <PointsPill>{userValue.me.points}</PointsPill>
                     </a>
-                    <a href="/cart" className="header__link">
-                        {cartValue?.cart.length > 0 && (
-                            <p>({cartValue?.cart.length})</p>
-                        )}
-                    </a>
+                    {cartValue?.cart.length > 0 && (
+                        <a href="/cart" className="header__link">
+                            <img
+                                src={cart}
+                                alt="Cart logo"
+                                className="header__icon"
+                            />
+                            <p className="header__length">({cartValue?.cart.length})</p>
+                        </a>
+                    )}
                 </div>
             </nav>
         </header>
