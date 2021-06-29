@@ -25,7 +25,7 @@ export interface AppHeaderProps {
 
 export interface PointsPillProps {
     children: React.ReactNode
-    variant: string
+    variant?: string
 }
 
 // Payloads
