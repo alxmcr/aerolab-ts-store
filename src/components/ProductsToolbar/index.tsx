@@ -40,7 +40,10 @@ export const ProductsToolbar = ({
         <div className="toolbar">
             <div className="toolbar__status">
                 <p className="toolbar__quantity">
-                    {currentPage * limitByPage} of {products.length} products
+                    {currentPage * limitByPage > products.length
+                        ? products.length
+                        : currentPage * limitByPage
+                    } of {products.length} products
                 </p>
             </div>
             <div className="toolbar__actions">
