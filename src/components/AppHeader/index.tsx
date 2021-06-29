@@ -4,6 +4,7 @@ import { PointsPill } from 'components/PointsPill'
 import { CartReducerContext } from 'context/CartReducerContext'
 import { UserReducerContext } from 'context/UserReducerContext'
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import "./AppHeader.css"
 
 export const AppHeader = () => {
@@ -19,28 +20,28 @@ export const AppHeader = () => {
         <header className="header">
             <nav className="header__nav">
                 <div className="header__group">
-                    <a href="/" className="header__link">
+                    <Link to="/" className="header__link">
                         <img
                             src={logo}
                             alt="Aerolab logo"
                             className="header__icon header__icon--logo"
                         />
-                    </a>
+                    </Link>
                 </div>
                 <div className="header__group">
-                    <a href="/" className="header__link">
+                    <Link to="/" className="header__link">
                         <span className="header__name">{userValue.me.name}</span>
                         <PointsPill>{userValue.me.points}</PointsPill>
-                    </a>
+                    </Link>
                     {cartValue?.cart.length > 0 && (
-                        <a href="/" className="header__link">
+                        <Link to="/" className="header__link">
                             <img
                                 src={cart}
                                 alt="Cart logo"
                                 className="header__icon"
                             />
                             <p className="header__length">({cartValue?.cart.length})</p>
-                        </a>
+                        </Link>
                     )}
                 </div>
             </nav>
