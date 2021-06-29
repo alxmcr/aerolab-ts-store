@@ -34,7 +34,7 @@ export const AppHeader = () => {
                         <PointsPill>{userValue.me.points}</PointsPill>
                     </Link>
                     {cartValue?.cart.length > 0 && (
-                        <Link to="/" className="header__link">
+                        <Link to="/cart" className="header__link">
                             <img
                                 src={cart}
                                 alt="Cart logo"

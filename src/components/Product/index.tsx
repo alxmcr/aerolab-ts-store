@@ -21,9 +21,10 @@ export const Product = ({ product }: ProductProps) => {
     const handlerAddCart = () => {
         const { dispatch } = cartValue;
         if (dispatch !== undefined) {
-            dispatch({ type: "addProduct", payload: { product } })
+            dispatch({ type: "addProduct", payload: { product, quantity: 1 } })
         }
     }
+
     const handlerRedeemProduct = () => {
         const { cost } = product
         const { dispatch } = userValue;
@@ -32,6 +33,7 @@ export const Product = ({ product }: ProductProps) => {
             dispatch({ type: "decrementPoints", payload: { points: cost } })
         }
     }
+
     return (
         <figure
             className={`product ${userValue.me?.points >= cost && 'product--posible'}`}

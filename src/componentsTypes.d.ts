@@ -35,6 +35,7 @@ export interface PointsPayload {
 
 export interface ProductPayload {
     product: ProductAPI
+    quantity: number
 }
 
 // Reducer: state
@@ -47,8 +48,18 @@ export interface UserReducerState {
     me: UserAPI
 }
 
+export interface ProductCart {
+    _id: string
+    name: string
+    cost: number
+    category: CategoryType
+    img: ImageAPI
+    createDate: number
+    quantity: number
+}
+
 export interface CartReducerState {
-    cart: ProductAPI[]
+    cart: ProductCart[]
 }
 
 //  Reducer: Actions Types
@@ -116,7 +127,7 @@ export interface PublicRouteAppProps {
 }
 
 export interface CartReducerProps {
-    cart: ProductAPI[]
+    cart: ProductCart[]
     dispatch?: React.Dispatch<ACTION_TYPES_CART>
 }
 
