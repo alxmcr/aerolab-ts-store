@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# Aerolab - Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Point-based product store.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+The user has a defined number of points and each product is worth a specific number of points.
 
-### `npm start`
+- Each product must be visibly priced in points.
+- The user should be able to filter the products by price, from highest to lowest and vice versa.
+- The user should be able to see how many points they have on their account.
+- There should be a clear way for the user to see which products he can buy and which he cannot.
+- The buy button should be available on products that the user has enough points to buy.
+- A "buy now" button should be displayed when the user interacts with a product that they can buy.
+- Cuando el usuario no puede comprar un producto, debería ver cuantos puntos le faltan para poder comprarlo.
+- A user should not be able to buy a product for which they do not have enough points to buy.
+- When the user purchases, the amount of points must be automatically deducted from the available points.
+- There should be a screen where you can see the history of redeemed products.
+- I should not be able to buy a product while charging points or buying another product.
+- There must be a maximum of 16 products on the screen but I must be able to change the page to see the rest.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Lessons Learned
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I learned and practice more about CSS, React.js, and React Hooks.
 
-### `npm test`
+## Run Locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the project
 
-### `npm run build`
+```bash
+  git clone https://github.com/alxmcr/aerolab-ts-store
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Go to the project directory
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  cd aerolab-ts-store
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install dependencies
 
-### `npm run eject`
+```bash
+  npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Start the server
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  npm run start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Tech Stack
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+HTML, CSS, JavaScript, TypeScript, React.js
 
-## Learn More
+## Screenshots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![App Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1626930045/Portfolio/product-store-images/aerolab-challenge-product-store_xugvdd.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Demo
+
+[https://aerolab-product-store.netlify.app/](https://aerolab-product-store.netlify.app/)
+
+## Authors
+
+- [Aerolab - Challenge](https://aerolab.co/)
+- [Alejandro M. Coca Rojas (@alxmcr)](https://www.github.com/alxmcr)
+
+## Feedback
+
+If you have any feedback, please reach out to us at amcocarojas@gmail.com.
