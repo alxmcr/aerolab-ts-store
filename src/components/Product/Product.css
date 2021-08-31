@@ -5,7 +5,7 @@
   margin: 0 auto;
   padding: 0.5rem 1rem;
   position: relative;
-  width: 12rem;
+  width: 20rem;
 }
 
 .product--posible:hover {
@@ -140,4 +140,10 @@
   height: 100%;
   width: 100%;
   transition: 0.8s linear;
+}
+
+@media screen and (min-width: 500px){
+  .product {
+    width: 12rem;
+  }
 }
